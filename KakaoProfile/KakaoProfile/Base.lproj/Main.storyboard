@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--로그인-->
         <scene sceneID="ios-qX-53Y">
             <objects>
                 <viewController id="F1q-nD-Ni7" sceneMemberID="viewController">
@@ -18,27 +18,61 @@
                         <viewLayoutGuide key="safeArea" id="sze-2U-OmR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="wOC-e3-D2h"/>
+                    <tabBarItem key="tabBarItem" title="로그인" image="l.square.fill" catalog="system" id="wOC-e3-D2h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYT-RM-cDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1096" y="154"/>
         </scene>
-        <!--Item 1-->
+        <!--프로필-->
         <scene sceneID="dfP-CW-OVm">
             <objects>
                 <viewController id="GPn-A6-vFZ" customClass="ViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Nu-Ru-PVQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13w-RC-mx5">
+                                <rect key="frame" x="182" y="624" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1db-qo-8ZN">
+                                <rect key="frame" x="182" y="679" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="editButtonTouched:" destination="GPn-A6-vFZ" eventType="touchUpInside" id="kTK-ce-Niv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pne-Kr-oIO">
+                                <rect key="frame" x="139" y="650" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7wL-94-pzv">
+                                <rect key="frame" x="87" y="440" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YON-C4-62H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="1be-Ky-CyR"/>
+                    <tabBarItem key="tabBarItem" title="프로필" image="person.fill" catalog="system" id="1be-Ky-CyR"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="pne-Kr-oIO" id="hMd-fP-9A5"/>
+                        <outlet property="editButton" destination="1db-qo-8ZN" id="LmH-Ir-3KE"/>
+                        <outlet property="nameLabel" destination="13w-RC-mx5" id="68d-Yl-Ffv"/>
+                        <outlet property="profileImage" destination="7wL-94-pzv" id="lxJ-rK-9VR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFM-r8-6po" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1097" y="-540"/>
+            <point key="canvasLocation" x="-1097.1014492753625" y="-540.40178571428567"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="b18-A8-1ms">
@@ -60,6 +94,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="l.square.fill" catalog="system" width="128" height="114"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
