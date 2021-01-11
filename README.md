@@ -1,7 +1,7 @@
 # swift-w2-profile
 모바일 2주차 프로필 저장소
 
-###Step1
+### Step1
 1/11 19:49
 1. 프로젝트 생성
 2. Toolbar Controller 추가 및 Initial ViewController로 지정
