@@ -7,66 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		438F35A525AC429200138E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F35A425AC429200138E3D /* AppDelegate.swift */; };
-		438F35A725AC429200138E3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F35A625AC429200138E3D /* SceneDelegate.swift */; };
-		438F35A925AC429200138E3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F35A825AC429200138E3D /* ContentView.swift */; };
-		438F35AB25AC429300138E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438F35AA25AC429300138E3D /* Assets.xcassets */; };
-		438F35AE25AC429300138E3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438F35AD25AC429300138E3D /* Preview Assets.xcassets */; };
-		438F35B125AC429300138E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F35AF25AC429300138E3D /* LaunchScreen.storyboard */; };
-		438F35BC25AC429300138E3D /* KakaoProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F35BB25AC429300138E3D /* KakaoProfileTests.swift */; };
-		438F35C725AC429300138E3D /* KakaoProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F35C625AC429300138E3D /* KakaoProfileUITests.swift */; };
+		438F35E125AC5A5000138E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F35E025AC5A5000138E3D /* AppDelegate.swift */; };
+		438F35E325AC5A5000138E3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F35E225AC5A5000138E3D /* SceneDelegate.swift */; };
+		438F35E525AC5A5000138E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F35E425AC5A5000138E3D /* ViewController.swift */; };
+		438F35E825AC5A5000138E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F35E625AC5A5000138E3D /* Main.storyboard */; };
+		438F35EA25AC5A5100138E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438F35E925AC5A5100138E3D /* Assets.xcassets */; };
+		438F35ED25AC5A5100138E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F35EB25AC5A5100138E3D /* LaunchScreen.storyboard */; };
+		438F35F825AC5A5100138E3D /* KakaoProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F35F725AC5A5100138E3D /* KakaoProfileTests.swift */; };
+		438F360325AC5A5100138E3D /* KakaoProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F360225AC5A5100138E3D /* KakaoProfileUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		438F35B825AC429300138E3D /* PBXContainerItemProxy */ = {
+		438F35F425AC5A5100138E3D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 438F359925AC429200138E3D /* Project object */;
+			containerPortal = 438F35D525AC5A5000138E3D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 438F35A025AC429200138E3D;
+			remoteGlobalIDString = 438F35DC25AC5A5000138E3D;
 			remoteInfo = KakaoProfile;
 		};
-		438F35C325AC429300138E3D /* PBXContainerItemProxy */ = {
+		438F35FF25AC5A5100138E3D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 438F359925AC429200138E3D /* Project object */;
+			containerPortal = 438F35D525AC5A5000138E3D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 438F35A025AC429200138E3D;
+			remoteGlobalIDString = 438F35DC25AC5A5000138E3D;
 			remoteInfo = KakaoProfile;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		438F35A125AC429200138E3D /* KakaoProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		438F35A425AC429200138E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		438F35A625AC429200138E3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		438F35A825AC429200138E3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		438F35AA25AC429300138E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		438F35AD25AC429300138E3D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		438F35B025AC429300138E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		438F35B225AC429300138E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		438F35B725AC429300138E3D /* KakaoProfileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoProfileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		438F35BB25AC429300138E3D /* KakaoProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoProfileTests.swift; sourceTree = "<group>"; };
-		438F35BD25AC429300138E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		438F35C225AC429300138E3D /* KakaoProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		438F35C625AC429300138E3D /* KakaoProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoProfileUITests.swift; sourceTree = "<group>"; };
-		438F35C825AC429300138E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438F35DD25AC5A5000138E3D /* KakaoProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		438F35E025AC5A5000138E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		438F35E225AC5A5000138E3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		438F35E425AC5A5000138E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		438F35E725AC5A5000138E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		438F35E925AC5A5100138E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		438F35EC25AC5A5100138E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		438F35EE25AC5A5100138E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438F35F325AC5A5100138E3D /* KakaoProfileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoProfileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		438F35F725AC5A5100138E3D /* KakaoProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoProfileTests.swift; sourceTree = "<group>"; };
+		438F35F925AC5A5100138E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438F35FE25AC5A5100138E3D /* KakaoProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		438F360225AC5A5100138E3D /* KakaoProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoProfileUITests.swift; sourceTree = "<group>"; };
+		438F360425AC5A5100138E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		438F359E25AC429200138E3D /* Frameworks */ = {
+		438F35DA25AC5A5000138E3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		438F35B425AC429300138E3D /* Frameworks */ = {
+		438F35F025AC5A5100138E3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		438F35BF25AC429300138E3D /* Frameworks */ = {
+		438F35FB25AC5A5100138E3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,62 +76,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		438F359825AC429200138E3D = {
+		438F35D425AC5A5000138E3D = {
 			isa = PBXGroup;
 			children = (
-				438F35A325AC429200138E3D /* KakaoProfile */,
-				438F35BA25AC429300138E3D /* KakaoProfileTests */,
-				438F35C525AC429300138E3D /* KakaoProfileUITests */,
-				438F35A225AC429200138E3D /* Products */,
+				438F35DF25AC5A5000138E3D /* KakaoProfile */,
+				438F35F625AC5A5100138E3D /* KakaoProfileTests */,
+				438F360125AC5A5100138E3D /* KakaoProfileUITests */,
+				438F35DE25AC5A5000138E3D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		438F35A225AC429200138E3D /* Products */ = {
+		438F35DE25AC5A5000138E3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				438F35A125AC429200138E3D /* KakaoProfile.app */,
-				438F35B725AC429300138E3D /* KakaoProfileTests.xctest */,
-				438F35C225AC429300138E3D /* KakaoProfileUITests.xctest */,
+				438F35DD25AC5A5000138E3D /* KakaoProfile.app */,
+				438F35F325AC5A5100138E3D /* KakaoProfileTests.xctest */,
+				438F35FE25AC5A5100138E3D /* KakaoProfileUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		438F35A325AC429200138E3D /* KakaoProfile */ = {
+		438F35DF25AC5A5000138E3D /* KakaoProfile */ = {
 			isa = PBXGroup;
 			children = (
-				438F35A425AC429200138E3D /* AppDelegate.swift */,
-				438F35A625AC429200138E3D /* SceneDelegate.swift */,
-				438F35A825AC429200138E3D /* ContentView.swift */,
-				438F35AA25AC429300138E3D /* Assets.xcassets */,
-				438F35AF25AC429300138E3D /* LaunchScreen.storyboard */,
-				438F35B225AC429300138E3D /* Info.plist */,
-				438F35AC25AC429300138E3D /* Preview Content */,
+				438F35E025AC5A5000138E3D /* AppDelegate.swift */,
+				438F35E225AC5A5000138E3D /* SceneDelegate.swift */,
+				438F35E425AC5A5000138E3D /* ViewController.swift */,
+				438F35E625AC5A5000138E3D /* Main.storyboard */,
+				438F35E925AC5A5100138E3D /* Assets.xcassets */,
+				438F35EB25AC5A5100138E3D /* LaunchScreen.storyboard */,
+				438F35EE25AC5A5100138E3D /* Info.plist */,
 			);
 			path = KakaoProfile;
 			sourceTree = "<group>";
 		};
-		438F35AC25AC429300138E3D /* Preview Content */ = {
+		438F35F625AC5A5100138E3D /* KakaoProfileTests */ = {
 			isa = PBXGroup;
 			children = (
-				438F35AD25AC429300138E3D /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		438F35BA25AC429300138E3D /* KakaoProfileTests */ = {
-			isa = PBXGroup;
-			children = (
-				438F35BB25AC429300138E3D /* KakaoProfileTests.swift */,
-				438F35BD25AC429300138E3D /* Info.plist */,
+				438F35F725AC5A5100138E3D /* KakaoProfileTests.swift */,
+				438F35F925AC5A5100138E3D /* Info.plist */,
 			);
 			path = KakaoProfileTests;
 			sourceTree = "<group>";
 		};
-		438F35C525AC429300138E3D /* KakaoProfileUITests */ = {
+		438F360125AC5A5100138E3D /* KakaoProfileUITests */ = {
 			isa = PBXGroup;
 			children = (
-				438F35C625AC429300138E3D /* KakaoProfileUITests.swift */,
-				438F35C825AC429300138E3D /* Info.plist */,
+				438F360225AC5A5100138E3D /* KakaoProfileUITests.swift */,
+				438F360425AC5A5100138E3D /* Info.plist */,
 			);
 			path = KakaoProfileUITests;
 			sourceTree = "<group>";
@@ -139,13 +131,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		438F35A025AC429200138E3D /* KakaoProfile */ = {
+		438F35DC25AC5A5000138E3D /* KakaoProfile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 438F35CB25AC429300138E3D /* Build configuration list for PBXNativeTarget "KakaoProfile" */;
+			buildConfigurationList = 438F360725AC5A5100138E3D /* Build configuration list for PBXNativeTarget "KakaoProfile" */;
 			buildPhases = (
-				438F359D25AC429200138E3D /* Sources */,
-				438F359E25AC429200138E3D /* Frameworks */,
-				438F359F25AC429200138E3D /* Resources */,
+				438F35D925AC5A5000138E3D /* Sources */,
+				438F35DA25AC5A5000138E3D /* Frameworks */,
+				438F35DB25AC5A5000138E3D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -153,69 +145,69 @@
 			);
 			name = KakaoProfile;
 			productName = KakaoProfile;
-			productReference = 438F35A125AC429200138E3D /* KakaoProfile.app */;
+			productReference = 438F35DD25AC5A5000138E3D /* KakaoProfile.app */;
 			productType = "com.apple.product-type.application";
 		};
-		438F35B625AC429300138E3D /* KakaoProfileTests */ = {
+		438F35F225AC5A5100138E3D /* KakaoProfileTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 438F35CE25AC429300138E3D /* Build configuration list for PBXNativeTarget "KakaoProfileTests" */;
+			buildConfigurationList = 438F360A25AC5A5100138E3D /* Build configuration list for PBXNativeTarget "KakaoProfileTests" */;
 			buildPhases = (
-				438F35B325AC429300138E3D /* Sources */,
-				438F35B425AC429300138E3D /* Frameworks */,
-				438F35B525AC429300138E3D /* Resources */,
+				438F35EF25AC5A5100138E3D /* Sources */,
+				438F35F025AC5A5100138E3D /* Frameworks */,
+				438F35F125AC5A5100138E3D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				438F35B925AC429300138E3D /* PBXTargetDependency */,
+				438F35F525AC5A5100138E3D /* PBXTargetDependency */,
 			);
 			name = KakaoProfileTests;
 			productName = KakaoProfileTests;
-			productReference = 438F35B725AC429300138E3D /* KakaoProfileTests.xctest */;
+			productReference = 438F35F325AC5A5100138E3D /* KakaoProfileTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		438F35C125AC429300138E3D /* KakaoProfileUITests */ = {
+		438F35FD25AC5A5100138E3D /* KakaoProfileUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 438F35D125AC429300138E3D /* Build configuration list for PBXNativeTarget "KakaoProfileUITests" */;
+			buildConfigurationList = 438F360D25AC5A5100138E3D /* Build configuration list for PBXNativeTarget "KakaoProfileUITests" */;
 			buildPhases = (
-				438F35BE25AC429300138E3D /* Sources */,
-				438F35BF25AC429300138E3D /* Frameworks */,
-				438F35C025AC429300138E3D /* Resources */,
+				438F35FA25AC5A5100138E3D /* Sources */,
+				438F35FB25AC5A5100138E3D /* Frameworks */,
+				438F35FC25AC5A5100138E3D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				438F35C425AC429300138E3D /* PBXTargetDependency */,
+				438F360025AC5A5100138E3D /* PBXTargetDependency */,
 			);
 			name = KakaoProfileUITests;
 			productName = KakaoProfileUITests;
-			productReference = 438F35C225AC429300138E3D /* KakaoProfileUITests.xctest */;
+			productReference = 438F35FE25AC5A5100138E3D /* KakaoProfileUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		438F359925AC429200138E3D /* Project object */ = {
+		438F35D525AC5A5000138E3D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = com.kakaocorp;
 				TargetAttributes = {
-					438F35A025AC429200138E3D = {
+					438F35DC25AC5A5000138E3D = {
 						CreatedOnToolsVersion = 11.5;
 					};
-					438F35B625AC429300138E3D = {
+					438F35F225AC5A5100138E3D = {
 						CreatedOnToolsVersion = 11.5;
-						TestTargetID = 438F35A025AC429200138E3D;
+						TestTargetID = 438F35DC25AC5A5000138E3D;
 					};
-					438F35C125AC429300138E3D = {
+					438F35FD25AC5A5100138E3D = {
 						CreatedOnToolsVersion = 11.5;
-						TestTargetID = 438F35A025AC429200138E3D;
+						TestTargetID = 438F35DC25AC5A5000138E3D;
 					};
 				};
 			};
-			buildConfigurationList = 438F359C25AC429200138E3D /* Build configuration list for PBXProject "KakaoProfile" */;
+			buildConfigurationList = 438F35D825AC5A5000138E3D /* Build configuration list for PBXProject "KakaoProfile" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,37 +215,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 438F359825AC429200138E3D;
-			productRefGroup = 438F35A225AC429200138E3D /* Products */;
+			mainGroup = 438F35D425AC5A5000138E3D;
+			productRefGroup = 438F35DE25AC5A5000138E3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				438F35A025AC429200138E3D /* KakaoProfile */,
-				438F35B625AC429300138E3D /* KakaoProfileTests */,
-				438F35C125AC429300138E3D /* KakaoProfileUITests */,
+				438F35DC25AC5A5000138E3D /* KakaoProfile */,
+				438F35F225AC5A5100138E3D /* KakaoProfileTests */,
+				438F35FD25AC5A5100138E3D /* KakaoProfileUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		438F359F25AC429200138E3D /* Resources */ = {
+		438F35DB25AC5A5000138E3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438F35B125AC429300138E3D /* LaunchScreen.storyboard in Resources */,
-				438F35AE25AC429300138E3D /* Preview Assets.xcassets in Resources */,
-				438F35AB25AC429300138E3D /* Assets.xcassets in Resources */,
+				438F35ED25AC5A5100138E3D /* LaunchScreen.storyboard in Resources */,
+				438F35EA25AC5A5100138E3D /* Assets.xcassets in Resources */,
+				438F35E825AC5A5000138E3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		438F35B525AC429300138E3D /* Resources */ = {
+		438F35F125AC5A5100138E3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		438F35C025AC429300138E3D /* Resources */ = {
+		438F35FC25AC5A5100138E3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,52 +255,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		438F359D25AC429200138E3D /* Sources */ = {
+		438F35D925AC5A5000138E3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438F35A525AC429200138E3D /* AppDelegate.swift in Sources */,
-				438F35A725AC429200138E3D /* SceneDelegate.swift in Sources */,
-				438F35A925AC429200138E3D /* ContentView.swift in Sources */,
+				438F35E525AC5A5000138E3D /* ViewController.swift in Sources */,
+				438F35E125AC5A5000138E3D /* AppDelegate.swift in Sources */,
+				438F35E325AC5A5000138E3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		438F35B325AC429300138E3D /* Sources */ = {
+		438F35EF25AC5A5100138E3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438F35BC25AC429300138E3D /* KakaoProfileTests.swift in Sources */,
+				438F35F825AC5A5100138E3D /* KakaoProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		438F35BE25AC429300138E3D /* Sources */ = {
+		438F35FA25AC5A5100138E3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438F35C725AC429300138E3D /* KakaoProfileUITests.swift in Sources */,
+				438F360325AC5A5100138E3D /* KakaoProfileUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		438F35B925AC429300138E3D /* PBXTargetDependency */ = {
+		438F35F525AC5A5100138E3D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 438F35A025AC429200138E3D /* KakaoProfile */;
-			targetProxy = 438F35B825AC429300138E3D /* PBXContainerItemProxy */;
+			target = 438F35DC25AC5A5000138E3D /* KakaoProfile */;
+			targetProxy = 438F35F425AC5A5100138E3D /* PBXContainerItemProxy */;
 		};
-		438F35C425AC429300138E3D /* PBXTargetDependency */ = {
+		438F360025AC5A5100138E3D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 438F35A025AC429200138E3D /* KakaoProfile */;
-			targetProxy = 438F35C325AC429300138E3D /* PBXContainerItemProxy */;
+			target = 438F35DC25AC5A5000138E3D /* KakaoProfile */;
+			targetProxy = 438F35FF25AC5A5100138E3D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		438F35AF25AC429300138E3D /* LaunchScreen.storyboard */ = {
+		438F35E625AC5A5000138E3D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				438F35B025AC429300138E3D /* Base */,
+				438F35E725AC5A5000138E3D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		438F35EB25AC5A5100138E3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				438F35EC25AC5A5100138E3D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		438F35C925AC429300138E3D /* Debug */ = {
+		438F360525AC5A5100138E3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +376,7 @@
 			};
 			name = Debug;
 		};
-		438F35CA25AC429300138E3D /* Release */ = {
+		438F360625AC5A5100138E3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -430,13 +430,11 @@
 			};
 			name = Release;
 		};
-		438F35CC25AC429300138E3D /* Debug */ = {
+		438F360825AC5A5100138E3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"KakaoProfile/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = KakaoProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,13 +447,11 @@
 			};
 			name = Debug;
 		};
-		438F35CD25AC429300138E3D /* Release */ = {
+		438F360925AC5A5100138E3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"KakaoProfile/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = KakaoProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -468,7 +464,7 @@
 			};
 			name = Release;
 		};
-		438F35CF25AC429300138E3D /* Debug */ = {
+		438F360B25AC5A5100138E3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -489,7 +485,7 @@
 			};
 			name = Debug;
 		};
-		438F35D025AC429300138E3D /* Release */ = {
+		438F360C25AC5A5100138E3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -510,7 +506,7 @@
 			};
 			name = Release;
 		};
-		438F35D225AC429300138E3D /* Debug */ = {
+		438F360E25AC5A5100138E3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -529,7 +525,7 @@
 			};
 			name = Debug;
 		};
-		438F35D325AC429300138E3D /* Release */ = {
+		438F360F25AC5A5100138E3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -551,43 +547,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		438F359C25AC429200138E3D /* Build configuration list for PBXProject "KakaoProfile" */ = {
+		438F35D825AC5A5000138E3D /* Build configuration list for PBXProject "KakaoProfile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				438F35C925AC429300138E3D /* Debug */,
-				438F35CA25AC429300138E3D /* Release */,
+				438F360525AC5A5100138E3D /* Debug */,
+				438F360625AC5A5100138E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		438F35CB25AC429300138E3D /* Build configuration list for PBXNativeTarget "KakaoProfile" */ = {
+		438F360725AC5A5100138E3D /* Build configuration list for PBXNativeTarget "KakaoProfile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				438F35CC25AC429300138E3D /* Debug */,
-				438F35CD25AC429300138E3D /* Release */,
+				438F360825AC5A5100138E3D /* Debug */,
+				438F360925AC5A5100138E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		438F35CE25AC429300138E3D /* Build configuration list for PBXNativeTarget "KakaoProfileTests" */ = {
+		438F360A25AC5A5100138E3D /* Build configuration list for PBXNativeTarget "KakaoProfileTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				438F35CF25AC429300138E3D /* Debug */,
-				438F35D025AC429300138E3D /* Release */,
+				438F360B25AC5A5100138E3D /* Debug */,
+				438F360C25AC5A5100138E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		438F35D125AC429300138E3D /* Build configuration list for PBXNativeTarget "KakaoProfileUITests" */ = {
+		438F360D25AC5A5100138E3D /* Build configuration list for PBXNativeTarget "KakaoProfileUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				438F35D225AC429300138E3D /* Debug */,
-				438F35D325AC429300138E3D /* Release */,
+				438F360E25AC5A5100138E3D /* Debug */,
+				438F360F25AC5A5100138E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 438F359925AC429200138E3D /* Project object */;
+	rootObject = 438F35D525AC5A5000138E3D /* Project object */;
 }
