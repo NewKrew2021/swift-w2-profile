@@ -9,3 +9,5 @@
 - Tabbar Controller 추가, Initial View Controller로 지정
 - 기본 View Controller(스토리보드에 있던) 삭제
 - print(#file, #line, #function, #column) 실행 후 콘솔 출력문 확인
+
+![screenshot 1](https://user-images.githubusercontent.com/28801805/104168650-b7e86400-5441-11eb-910e-5b0e592775ab.png)
