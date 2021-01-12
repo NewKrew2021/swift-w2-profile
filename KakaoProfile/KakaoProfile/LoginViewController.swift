@@ -9,8 +9,28 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var doneButton: UIButton!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var descriptionTextField: UITextField!
+    var nameText : String = ""
+    var descriptionText : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let namePaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        let descriptionPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        self.nameTextField.leftView = namePaddingView
+        self.descriptionTextField.leftView = descriptionPaddingView
+        self.nameTextField.leftViewMode = .always
+        self.descriptionTextField.leftViewMode = .always
+        
+        self.nameTextField.text = nameText
+        self.descriptionTextField.text = descriptionText
+    }
+    
+    @IBAction func cancelButtonTouched(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
