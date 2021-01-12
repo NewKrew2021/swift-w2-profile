@@ -142,6 +142,8 @@
                     <navigationItem key="navigationItem" id="H2Z-id-6CJ"/>
                     <connections>
                         <outlet property="changeButton" destination="GvA-py-hna" id="qTu-eH-o3c"/>
+                        <outlet property="descriptionTextField" destination="0uo-ei-Dhs" id="2JM-df-Lyz"/>
+                        <outlet property="nameTextField" destination="CG0-1T-Syd" id="hXl-XW-PQ7"/>
                         <outlet property="profileImage" destination="VgP-40-YOx" id="VXi-qJ-aBO"/>
                     </connections>
                 </viewController>
