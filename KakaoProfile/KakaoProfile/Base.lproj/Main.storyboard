@@ -130,6 +130,9 @@
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="camera.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="selectImageButtonTouched:" destination="JKG-jZ-lWp" eventType="touchUpInside" id="FNf-vV-kE0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="30T-zO-sy9"/>
