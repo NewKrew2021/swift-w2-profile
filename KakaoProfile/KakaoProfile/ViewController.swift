@@ -12,13 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
-    @IBAction func editButtonTouched(_ sender: Any) {
-        self.nameLabel.textColor = UIColor.blue
-        self.nameLabel.backgroundColor = UIColor.yellow
-        self.nameLabel.alpha = 0.5
-        self.descriptionLabel.text = "크루미션"
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
@@ -31,6 +24,18 @@ class ViewController: UIViewController {
         self.descriptionLabel.textColor = UIColor.secondarySystemBackground
     }
 
-
+    @IBAction func editButtonTouched(_ sender: Any) {
+        self.nameLabel.textColor = UIColor.blue
+        self.nameLabel.backgroundColor = UIColor.yellow
+        self.nameLabel.alpha = 0.5
+        self.descriptionLabel.text = "크루미션"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LoginViewController {
+            destination.nameText = self.nameLabel.text ?? "prapare에서 nil인 경우"
+            destination.descriptionText = self.descriptionLabel.text ?? "prepare에서 nil인 경우"
+        }
+    }
 }
 
