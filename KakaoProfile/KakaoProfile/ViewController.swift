@@ -16,15 +16,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.nameLabel.text = "Eden"
         self.nameLabel.backgroundColor = UIColor.blue
         self.nameLabel.textColor = UIColor.gray
         self.nameLabel.alpha = 50
         self.nameLabel.font = UIFont(name: "System", size: 100)
         self.descriptionLabel.text = "팬 소음이 너무 크다"
-        
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LoginViewController {
+            destination.nameText = self.nameLabel.text ?? ""
+            destination.descriptionText = self.descriptionLabel.text ?? ""
+            print("segue")
+        }
     }
     
     @IBAction func editButtonTouched(_ sender: Any) {
@@ -32,6 +37,23 @@ class ViewController: UIViewController {
         self.nameLabel.backgroundColor = UIColor.yellow
         self.nameLabel.alpha = 0.5
         self.descriptionLabel.text = "크루미션"
+        print("ibaction")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
     }
 }
 
