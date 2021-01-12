@@ -25,10 +25,12 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         print(#file, #line, #function, #column)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         print(#file, #line, #function, #column)
     }
     
@@ -40,17 +42,19 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? LoginViewController {
-            destination.nameText = self.nameLabel.text ?? ""
-            destination.descriptionText = self.descriptionLabel.text ?? ""
-        }
+        super.prepare(for: segue, sender: sender)
+        guard let destination = segue.destination as? LoginViewController  else {return}
+        destination.nameText = self.nameLabel.text ?? ""
+        destination.descriptionText = self.descriptionLabel.text ?? ""
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         print(#file, #line, #function, #column)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         print(#file, #line, #function, #column)
     }
 }
