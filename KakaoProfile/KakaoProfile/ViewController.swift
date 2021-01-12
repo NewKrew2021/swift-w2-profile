@@ -20,12 +20,18 @@ class ViewController: UIViewController {
         self.descriptionLabel.text = "KaKao"
     }
 
-
     @IBAction func editButtonTouched(_ sender: Any) {
         self.nameLabel.textColor = UIColor.blue
         self.nameLabel.backgroundColor = UIColor.yellow
         self.nameLabel.alpha = 0.5
         self.descriptionLabel.text = "크루미션"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LoginViewController {
+            destination.nameText = self.nameLabel.text ?? ""
+            destination.descriptionText = self.descriptionLabel.text ?? ""
+        }
     }
 }
 
