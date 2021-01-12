@@ -47,6 +47,9 @@
                                 <rect key="frame" x="165" y="620" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="editButtonTouched:" destination="MC0-ik-gjM" eventType="touchUpInside" id="NRO-8O-unT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuk-HS-Ypn">
                                 <rect key="frame" x="121" y="518" width="135" height="42"/>
@@ -62,7 +65,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="muM-P9-JXb"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="yuk-HS-Ypn" id="0ky-fn-ats"/>
-                        <outlet property="editButton" destination="aq7-do-Obh" id="yAE-8S-HaX"/>
+                        <outlet property="editButton" destination="aq7-do-Obh" id="Gco-Og-e0c"/>
                         <outlet property="nameLabel" destination="cza-8f-xI6" id="VXu-xx-4mP"/>
                         <outlet property="profileImage" destination="dTj-My-ITT" id="wYh-C3-7jK"/>
                     </connections>
