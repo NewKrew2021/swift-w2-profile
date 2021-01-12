@@ -8,3 +8,11 @@
 3. Item1, Item2 생성
 4. viewDidLoad() 함수에서 "print(#file, #line, #function, #column)" 출력
 <img width="319" alt="screenshot" src="https://user-images.githubusercontent.com/46565404/104172817-32b47d80-5448-11eb-9d41-d7bbc2885ff2.png">
+
+### Step2
+1/12 15:33
+1. Item1에 Label, ImageView, Button 추가
+2. IBOutlet
+3. Button의 IBAction으로 클릭을 통해 Label들의 상태 변경 
+<img width="424" alt="screenshot1" src="https://user-images.githubusercontent.com/46565404/104278550-2124b180-54ec-11eb-81c9-4b160a1289bb.png"><img width="424" alt="screenshot2" src="https://user-images.githubusercontent.com/46565404/104278665-4dd8c900-54ec-11eb-90df-06544ba887b6.png">
+
