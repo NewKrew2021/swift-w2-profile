@@ -14,6 +14,8 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var changeButton: UIButton!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
     
     var nameText: String?
     var descriptionText: String?
@@ -31,6 +33,9 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         changeButton.layer.borderColor = UIColor.clear.cgColor
         changeButton.clipsToBounds = true
         
+        //segue를 통해 넘어온 값을 이용해 텍스트 필드와 매칭
+        nameTextField.text = nameText
+        descriptionTextField.text = descriptionText
         imagePickerController.delegate = self//imagePickerController에서 발생하는 일을 내가 처리하겠다(위임)
     }
     
