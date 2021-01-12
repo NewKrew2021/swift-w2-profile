@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         self.descriptionLabel.text = "KaKao"
     }
 
-
     @IBAction func editButtonTouched(_ sender: Any) {
         self.nameLabel.textColor = UIColor.blue
         self.nameLabel.backgroundColor = UIColor.yellow

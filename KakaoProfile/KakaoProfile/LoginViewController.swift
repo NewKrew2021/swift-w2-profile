@@ -16,6 +16,22 @@ class LoginViewController: UIViewController {
     var nameText : String = ""
     var descriptionText : String = ""
     
+    override func viewWillAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
