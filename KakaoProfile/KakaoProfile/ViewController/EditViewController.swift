@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class EditViewController: UIViewController {
 
     @IBOutlet var cancelButton: UIButton!
     @IBOutlet var doneButton: UIButton!
@@ -16,7 +16,9 @@ class LoginViewController: UIViewController {
     @IBOutlet var profileImageView: UIImageView!
     var nameText : String = ""
     var descriptionText : String = ""
+    var profileImage : UIImage?
     private let imagePicker = UIImagePickerController()
+    var profileDelegate: ProfileDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,11 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func doneButtonTouched(_ sender: Any) {
+        profileDelegate?.receivedProfile(image: self.profileImageView.image, name: self.nameTextField.text ?? "name", description: self.descriptionTextField.text ?? "description")
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func selectImageButtonTouched(_ sender: Any) {
         self.imagePicker.sourceType = .photoLibrary
         self.imagePicker.allowsEditing = false
@@ -46,7 +53,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension EditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
