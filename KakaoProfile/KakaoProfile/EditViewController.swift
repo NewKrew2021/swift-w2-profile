@@ -13,6 +13,7 @@ class EditViewController: UIViewController, UINavigationControllerDelegate, UIIm
     var nameText : String = ""
     var descriptionText : String = ""
     var profileImageBefore: UIImageView?
+    var profileDelegate : ProfileDoneDelegate?
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
@@ -52,6 +53,12 @@ class EditViewController: UIViewController, UINavigationControllerDelegate, UIIm
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func doneButtonTouched(_ sender: Any) {
+        if let data = profileImage {
+            profileDelegate?.UpdateProfile(name: self.nameLabelEdited.text ?? "", desc: self.descriptionLabelEdited.text ?? "", imageView: self.profileImage)
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func selectImageButtonTouched(_ sender: Any) {
         if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
             imagePicker.delegate = self

@@ -65,3 +65,10 @@ david의 README
 
 ![image-20210113211603979](README.assets/image-20210113211603979.png)
 
+### commit : Done Button
+
+- make protocol : ProfileDoneDelegate
+- delcare protocol variable in EditViewController
+- make IBAction : doneButtonTouched
+- ViewController adapts protocol : ProfileDoneDelegate
+- ViewController implements method : UpdateProfile
