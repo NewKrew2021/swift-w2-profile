@@ -27,3 +27,9 @@
 ![스크린샷 2021-01-12 오후 5 51 32(2)](https://user-images.githubusercontent.com/28801805/104291495-f09a4300-54fe-11eb-807b-d4bb08fc4c30.png)
 ![스크린샷 2021-01-12 오후 5 51 37(2)](https://user-images.githubusercontent.com/28801805/104291507-f2fc9d00-54fe-11eb-9a4e-3d3898eddd58.png)
 
+5. make func selectImageButtonTouched
+- selectImageButtonTouched 함수 생성
+- delegate를 이용해 ViewController로 데이터(String, String, UIImage) 전달
+
+![Simulator Screen Shot - iPhone 11 - 2021-01-13 at 19 10 16](https://user-images.githubusercontent.com/28801805/104438485-6374ee00-55d3-11eb-8d4e-22fba81f61c6.png)
+![Simulator Screen Shot - iPhone 11 - 2021-01-13 at 19 10 29](https://user-images.githubusercontent.com/28801805/104438486-64a61b00-55d3-11eb-96fc-f0874d72ab59.png)
