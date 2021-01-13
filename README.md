@@ -44,3 +44,24 @@ david의 README
 
 ![image-20210112172651243](README.assets/image-20210112172651243.png)
 
+### commit : upload image in imageView
+
+### commit : addProfileChangeButton
+
+![image-20210113211523493](README.assets/image-20210113211523493.png)
+
+### commit : UIImagePickerController - 0113 21:00
+
+- declare a variable of instance of UIImagePickerController
+- Edit View Controller adopts two protocols : UINavigationControllerDelegate, UIImagePickerControllerDelegate
+- make IBAction of camera button that can configure and call UIImagePickerController
+- add two methods
+  1. imagePickerController
+  2. imagePickerControllerDidCancel
+
+![image-20210113211550266](README.assets/image-20210113211550266.png)
+
+
+
+![image-20210113211603979](README.assets/image-20210113211603979.png)
+

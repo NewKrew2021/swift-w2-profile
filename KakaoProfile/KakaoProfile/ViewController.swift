@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.width * 0.45
         self.nameLabel.text = "David"
         self.nameLabel.textAlignment = NSTextAlignment.center
         self.nameLabel.textColor = UIColor.white
@@ -32,9 +33,10 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? LoginViewController {
-            destination.nameText = self.nameLabel.text ?? "prapare에서 nil인 경우"
-            destination.descriptionText = self.descriptionLabel.text ?? "prepare에서 nil인 경우"
+        if let destination = segue.destination as? EditViewController {
+            destination.nameText = self.nameLabel.text ?? ""
+            destination.descriptionText = self.descriptionLabel.text ?? ""
+            destination.profileImageBefore = self.profileImage
         }
     }
 }
