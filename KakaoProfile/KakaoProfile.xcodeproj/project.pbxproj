@@ -15,7 +15,7 @@
 		32A4C43925AC596400F3E4BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A4C43725AC596400F3E4BD /* LaunchScreen.storyboard */; };
 		32A4C44425AC596400F3E4BD /* KakaoProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4C44325AC596400F3E4BD /* KakaoProfileTests.swift */; };
 		32A4C44F25AC596400F3E4BD /* KakaoProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4C44E25AC596400F3E4BD /* KakaoProfileUITests.swift */; };
-		32D0F82C25AD896700C3D287 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D0F82B25AD896700C3D287 /* LoginViewController.swift */; };
+		32D0F82C25AD896700C3D287 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D0F82B25AD896700C3D287 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		32A4C44A25AC596400F3E4BD /* KakaoProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A4C44E25AC596400F3E4BD /* KakaoProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoProfileUITests.swift; sourceTree = "<group>"; };
 		32A4C45025AC596400F3E4BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32D0F82B25AD896700C3D287 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		32D0F82B25AD896700C3D287 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32457BE925AF03360072FF6C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				32A4C43025AC596200F3E4BD /* ViewController.swift */,
+				32D0F82B25AD896700C3D287 /* EditViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		32A4C42025AC596200F3E4BD = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +110,13 @@
 		32A4C42B25AC596200F3E4BD /* KakaoProfile */ = {
 			isa = PBXGroup;
 			children = (
+				32457BE925AF03360072FF6C /* ViewController */,
 				32A4C42C25AC596200F3E4BD /* AppDelegate.swift */,
 				32A4C42E25AC596200F3E4BD /* SceneDelegate.swift */,
-				32A4C43025AC596200F3E4BD /* ViewController.swift */,
 				32A4C43225AC596200F3E4BD /* Main.storyboard */,
 				32A4C43525AC596300F3E4BD /* Assets.xcassets */,
 				32A4C43725AC596400F3E4BD /* LaunchScreen.storyboard */,
 				32A4C43A25AC596400F3E4BD /* Info.plist */,
-				32D0F82B25AD896700C3D287 /* LoginViewController.swift */,
 			);
 			path = KakaoProfile;
 			sourceTree = "<group>";
@@ -261,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32D0F82C25AD896700C3D287 /* LoginViewController.swift in Sources */,
+				32D0F82C25AD896700C3D287 /* EditViewController.swift in Sources */,
 				32A4C43125AC596200F3E4BD /* ViewController.swift in Sources */,
 				32A4C42D25AC596200F3E4BD /* AppDelegate.swift in Sources */,
 				32A4C42F25AC596200F3E4BD /* SceneDelegate.swift in Sources */,
@@ -441,6 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6UWSFQ86Y6;
 				INFOPLIST_FILE = KakaoProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6UWSFQ86Y6;
 				INFOPLIST_FILE = KakaoProfile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

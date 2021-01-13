@@ -27,3 +27,12 @@
 4. 화면 관련 콜백 함수들에서 print문 추가
 
 <img width="271" alt="screenshot" src="https://user-images.githubusercontent.com/46565404/104309235-306c2500-5515-11eb-9351-3bd8e4e4baeb.png">
+
+### Step4
+1/13 19:46
+1. 앨범에서 사진가져와서 imageView에 띄우기
+2. edit화면의 프로필 이미지뷰 scale type 변경 및 round 처리
+3. edit 화면에서 Done 버튼을 누른 후의 Delegate프로토콜 선언
+
+<img width="266" alt="sc1" src="https://user-images.githubusercontent.com/46565404/104442290-324aec80-55d8-11eb-8c7b-6adcd18b1ef8.png">
+<img width="265" alt="sc2" src="https://user-images.githubusercontent.com/46565404/104442344-4393f900-55d8-11eb-8dd7-98e629d7fa3c.png">
