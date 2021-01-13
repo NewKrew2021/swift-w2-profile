@@ -18,3 +18,5 @@
     - 뷰 컨트롤러의 생명주기별 함수를 오버라이딩해 순서를 테스트
     
 <div><img scr = "https://user-images.githubusercontent.com/45382324/104281975-b0809380-54f1-11eb-803e-78715de70ae9.png"></div>
+
+4. 
