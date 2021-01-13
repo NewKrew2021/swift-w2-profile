@@ -21,6 +21,7 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     var orginImage: UIImage?
     
     let imagePickerController = UIImagePickerController()
+    var sendData: SendData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,6 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         view.clipsToBounds = true
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(#file, #line, #function, #column)
@@ -55,10 +55,12 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBAction func cancelTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    @IBAction func doneTouched(_ sender: Any) {
-        
-    }
     
+    @IBAction func changeFinished(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        sendData?.sendTouched(changeFinish, profile: Profile(image: profileImage.image, name: profileName.text, description: profileDescription.text))
+    }
+
     @IBAction func selectImageButtonTouched(_ sender: Any) {
         let type = UIImagePickerController.SourceType.photoLibrary
         guard UIImagePickerController.isSourceTypeAvailable(type) else {return}
