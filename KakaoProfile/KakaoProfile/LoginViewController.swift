@@ -30,6 +30,8 @@ class LoginViewController: UIViewController {
         self.nameTextField.text = nameText
         self.descriptionTextField.text = descriptionText
         
+        self.profileImageView.layer.cornerRadius = 20
+        
         imagePicker.delegate = self
     }
     
