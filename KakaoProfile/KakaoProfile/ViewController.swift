@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
@@ -43,9 +42,10 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        guard let destination = segue.destination as? LoginViewController  else {return}
-        destination.nameText = self.nameLabel.text ?? ""
-        destination.descriptionText = self.descriptionLabel.text ?? ""
+        guard let destination = segue.destination as? LoginViewController else {return}
+        destination.descriptionText = descriptionLabel.text
+        destination.nameText = nameLabel.text
+        destination.orginImage = profileImage.image
     }
     
     override func viewWillDisappear(_ animated: Bool) {
