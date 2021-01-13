@@ -23,20 +23,20 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImage.layer.cornerRadius = profileImage.bounds.size.height/2.3
-        profileImage.layer.borderWidth = 1
-        profileImage.layer.borderColor = UIColor.clear.cgColor
-        profileImage.clipsToBounds = true
-        
-        changeButton.layer.cornerRadius = changeButton.bounds.size.height/2
-        changeButton.layer.borderWidth = 1
-        changeButton.layer.borderColor = UIColor.clear.cgColor
-        changeButton.clipsToBounds = true
+        roundTheImage(radius: 2.3, view: profileImage)
+        roundTheImage(radius: 2, view: changeButton)
         
         //segue를 통해 넘어온 값을 이용해 텍스트 필드와 매칭
         nameTextField.text = nameText
         descriptionTextField.text = descriptionText
         imagePickerController.delegate = self//imagePickerController에서 발생하는 일을 내가 처리하겠다(위임)
+    }
+    
+    func roundTheImage(radius: CGFloat, view: UIView){
+        view.layer.cornerRadius = view.bounds.size.height/radius
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.clear.cgColor
+        view.clipsToBounds = true
     }
     
     @IBAction func closeButton(_ sender: Any) {
