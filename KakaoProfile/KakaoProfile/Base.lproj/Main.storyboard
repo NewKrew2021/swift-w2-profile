@@ -83,10 +83,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-2R-GoY">
-                                <rect key="frame" x="67" y="360" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4Y-ae-ijU">
                                 <rect key="frame" x="23" y="528" width="321" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -119,6 +115,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-2R-GoY">
+                                <rect key="frame" x="131" y="410" width="113" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRt-wW-7oB">
+                                <rect key="frame" x="209" y="485" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="camera.fill" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SLs-yL-0dk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -129,6 +135,8 @@
                         <outlet property="descriptionLabelEdited" destination="74M-4M-qTe" id="aFr-r7-azK"/>
                         <outlet property="doneButton" destination="4sc-n5-CDi" id="xMI-Jx-rZ7"/>
                         <outlet property="nameLabelEdited" destination="r4Y-ae-ijU" id="Ijw-1R-bmZ"/>
+                        <outlet property="profileChangeButton" destination="YRt-wW-7oB" id="Huc-bc-UdM"/>
+                        <outlet property="profileImage" destination="Wwy-2R-GoY" id="733-eZ-qWX"/>
                         <outlet property="profileLabel" destination="hBU-7i-Jmf" id="3oV-0s-wyo"/>
                     </connections>
                 </viewController>
@@ -156,6 +164,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="profile_image" width="200" height="200"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
