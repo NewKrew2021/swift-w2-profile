@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="-1097.1014492753625" y="-540.40178571428567"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Edit View Controller-->
         <scene sceneID="6JF-5f-SpH">
             <objects>
-                <viewController id="JKG-jZ-lWp" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JKG-jZ-lWp" customClass="EditViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VbL-sD-aye">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="-2184" y="-205"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Edit View Controller-->
         <scene sceneID="9YU-ZW-vcF">
             <objects>
-                <viewController id="caL-9j-uj2" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="caL-9j-uj2" customClass="EditViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wfo-b7-p3v">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

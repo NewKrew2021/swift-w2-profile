@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        guard let destination = segue.destination as? LoginViewController else {return}
+        guard let destination = segue.destination as? EditViewController else {return}
         destination.descriptionText = descriptionLabel.text
         destination.nameText = nameLabel.text
         destination.orginImage = profileImage.image
