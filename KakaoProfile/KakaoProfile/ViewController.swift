@@ -46,6 +46,7 @@ class ViewController: UIViewController {
         destination.descriptionText = descriptionLabel.text
         destination.nameText = nameLabel.text
         destination.orginImage = profileImage.image
+        destination.sendData = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -56,5 +57,14 @@ class ViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print(#file, #line, #function, #column)
+    }
+}
+
+extension ViewController: SendData{
+    func sendTouched(_ button: UIButton, profile: Profile?) {
+        guard let profile = profile else {return}
+        profileImage.image = profile.image
+        descriptionLabel.text = profile.description
+        nameLabel.text = profile.name
     }
 }

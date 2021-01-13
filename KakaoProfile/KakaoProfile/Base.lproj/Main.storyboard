@@ -96,6 +96,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeFinished:" destination="JKG-jZ-lWp" eventType="touchUpInside" id="jL9-lK-DbO"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0uo-ei-Dhs">
                                 <rect key="frame" x="58" y="658" width="275" height="34"/>
@@ -192,7 +195,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneTouched:" destination="caL-9j-uj2" eventType="touchUpInside" id="x1E-Hc-5tm"/>
+                                    <action selector="changeFinished:" destination="caL-9j-uj2" eventType="touchUpInside" id="UE7-S5-AWz"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gHb-86-rK2">
