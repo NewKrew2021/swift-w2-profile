@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
@@ -24,12 +23,14 @@ class ViewController: UIViewController {
         self.descriptionLabel.text = "팬 소음이 너무 크다"
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? LoginViewController {
-            destination.nameText = self.nameLabel.text ?? ""
-            destination.descriptionText = self.descriptionLabel.text ?? ""
-            print("segue")
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
     }
     
     @IBAction func editButtonTouched(_ sender: Any) {
@@ -37,23 +38,33 @@ class ViewController: UIViewController {
         self.nameLabel.backgroundColor = UIColor.yellow
         self.nameLabel.alpha = 0.5
         self.descriptionLabel.text = "크루미션"
-        print("ibaction")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let destination = segue.destination as? EditViewController else {return}
+        destination.descriptionText = descriptionLabel.text
+        destination.nameText = nameLabel.text
+        destination.orginImage = profileImage.image
+        destination.sendData = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         print(#file, #line, #function, #column)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         print(#file, #line, #function, #column)
     }
 }
 
+extension ViewController: SendData{
+    func sendTouched(_ button: UIButton, profile: Profile?) {
+        guard let profile = profile else {return}
+        profileImage.image = profile.image
+        descriptionLabel.text = profile.description
+        nameLabel.text = profile.name
+    }
+}
