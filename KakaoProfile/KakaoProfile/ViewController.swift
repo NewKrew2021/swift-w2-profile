@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     
     @IBAction func editButtonTouched(_ sender: Any) {
         
-        print("segue")
         self.nameLabel.textColor = UIColor.blue
         self.nameLabel.backgroundColor = UIColor.yellow
         self.nameLabel.alpha = 0.5
@@ -36,11 +35,21 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if let destination = segue.destination as? LoginViewController {
-           destination.nameText = self.nameLabel.text!
-           destination.descriptionText = self.descriptionLabel.text!
+            destination.nameText = self.nameLabel.text!
+            destination.descriptionText = self.descriptionLabel.text!
+            destination.delegate = self
         }
 
     }
     
 }
 
+extension ViewController: SendDataDelegate {
+    
+    func sendData(name: String, description: String, image: UIImage) {
+        self.nameLabel.text = name
+        self.descriptionLabel.text = description
+        self.profileImage.image = image
+    }
+    
+}
