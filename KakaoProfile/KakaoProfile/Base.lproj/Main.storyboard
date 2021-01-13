@@ -48,10 +48,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7wL-94-pzv">
-                                <rect key="frame" x="75" y="438" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13w-RC-mx5">
                                 <rect key="frame" x="174" y="621" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,6 +55,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="krew-image" translatesAutoresizingMaskIntoConstraints="NO" id="7wL-94-pzv">
+                                <rect key="frame" x="145" y="513" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YON-C4-62H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -109,7 +109,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="krew-image" translatesAutoresizingMaskIntoConstraints="NO" id="VgP-40-YOx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgP-40-YOx">
                                 <rect key="frame" x="145" y="494" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -120,7 +120,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="closeButton:" destination="JKG-jZ-lWp" eventType="touchUpInside" id="6Oz-Hx-fIN"/>
+                                    <action selector="cancelTouched:" destination="JKG-jZ-lWp" eventType="touchUpInside" id="6Oz-Hx-fIN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvA-py-hna">
@@ -141,10 +141,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="H2Z-id-6CJ"/>
                     <connections>
-                        <outlet property="changeButton" destination="GvA-py-hna" id="qTu-eH-o3c"/>
-                        <outlet property="descriptionTextField" destination="0uo-ei-Dhs" id="2JM-df-Lyz"/>
-                        <outlet property="nameTextField" destination="CG0-1T-Syd" id="hXl-XW-PQ7"/>
+                        <outlet property="changeFinish" destination="PM6-KG-s1Y" id="Y5l-YR-0Rc"/>
+                        <outlet property="editImage" destination="GvA-py-hna" id="qTu-eH-o3c"/>
+                        <outlet property="profileDescription" destination="0uo-ei-Dhs" id="2JM-df-Lyz"/>
                         <outlet property="profileImage" destination="VgP-40-YOx" id="VXi-qJ-aBO"/>
+                        <outlet property="profileName" destination="CG0-1T-Syd" id="hXl-XW-PQ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsd-vq-UcH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -190,6 +191,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneTouched:" destination="caL-9j-uj2" eventType="touchUpInside" id="x1E-Hc-5tm"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gHb-86-rK2">
                                 <rect key="frame" x="58" y="658" width="275" height="34"/>
@@ -203,7 +207,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="krew-image" translatesAutoresizingMaskIntoConstraints="NO" id="9lT-iI-4DH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9lT-iI-4DH">
                                 <rect key="frame" x="145" y="494" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -214,7 +218,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="closeButton:" destination="caL-9j-uj2" eventType="touchUpInside" id="bSM-sX-Nxg"/>
+                                    <action selector="cancelTouched:" destination="caL-9j-uj2" eventType="touchUpInside" id="bSM-sX-Nxg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocV-0s-aof">
@@ -235,10 +239,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="KiW-VI-xvH"/>
                     <connections>
-                        <outlet property="changeButton" destination="ocV-0s-aof" id="p4u-B6-8yr"/>
-                        <outlet property="descriptionTextField" destination="gHb-86-rK2" id="NMq-Wr-1a0"/>
-                        <outlet property="nameTextField" destination="oMH-th-YTc" id="6Q3-sl-Qfz"/>
+                        <outlet property="editImage" destination="ocV-0s-aof" id="p4u-B6-8yr"/>
+                        <outlet property="profileDescription" destination="gHb-86-rK2" id="NMq-Wr-1a0"/>
                         <outlet property="profileImage" destination="9lT-iI-4DH" id="TWN-QM-x9r"/>
+                        <outlet property="profileName" destination="oMH-th-YTc" id="6Q3-sl-Qfz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCc-ZO-Sld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

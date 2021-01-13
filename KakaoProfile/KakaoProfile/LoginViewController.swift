@@ -10,25 +10,27 @@ import UIKit
 
 class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    weak open var delegate: (UIImagePickerControllerDelegate & UINavigationControllerDelegate)?
-    
     @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var changeButton: UIButton!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var editImage: UIButton!
+    @IBOutlet weak var profileName: UITextField!
+    @IBOutlet weak var profileDescription: UITextField!
+    @IBOutlet weak var changeFinish: UIButton!
     
-    var nameText: String?
     var descriptionText: String?
+    var nameText: String?
+    var orginImage: UIImage?
+    
     let imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        roundTheImage(radius: 2.3, view: profileImage)
-        roundTheImage(radius: 2, view: changeButton)
         
-        //segue를 통해 넘어온 값을 이용해 텍스트 필드와 매칭
-        nameTextField.text = nameText
-        descriptionTextField.text = descriptionText
+        profileImage.image = orginImage
+        profileName.text = nameText
+        profileDescription.text = descriptionText
+        
+        roundTheImage(radius: 2.3, view: profileImage)
+        roundTheImage(radius: 2, view: editImage)
         imagePickerController.delegate = self//imagePickerController에서 발생하는 일을 내가 처리하겠다(위임)
     }
     
@@ -39,8 +41,22 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
         view.clipsToBounds = true
     }
     
-    @IBAction func closeButton(_ sender: Any) {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    @IBAction func cancelTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func doneTouched(_ sender: Any) {
+        
     }
     
     @IBAction func selectImageButtonTouched(_ sender: Any) {
@@ -51,6 +67,24 @@ class LoginViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print("didFinishPickingMediaWithInfo", info)
+        var newImage: UIImage? = nil
+        if let possibleImage = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage { // 수정된 이미지가 있을 경우
+            newImage = possibleImage
+        } else if let possibleImage = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as? UIImage { // 오리지널 이미지가 있을 경우
+            newImage = possibleImage
+        }
+        
+        profileImage.image = newImage // 받아온 이미지를 이미지 뷰에 넣어준다.
+        picker.dismiss(animated: true) // 그리고 picker를 닫아준다.  
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(#file, #line, #function, #column)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(#file, #line, #function, #column)
     }
 }
