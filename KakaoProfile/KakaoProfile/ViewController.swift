@@ -7,7 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol ProfileDoneDelegate {
+    func UpdateProfile(name : String, desc : String, imageView : UIImageView)
+}
+
+class ViewController: UIViewController, ProfileDoneDelegate {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -15,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.width * 0.45
         self.nameLabel.text = "David"
         self.nameLabel.textAlignment = NSTextAlignment.center
         self.nameLabel.textColor = UIColor.white
@@ -22,20 +27,22 @@ class ViewController: UIViewController {
         self.descriptionLabel.text = "행복 멀리 없다!"
         self.descriptionLabel.textAlignment = NSTextAlignment.center
         self.descriptionLabel.textColor = UIColor.secondarySystemBackground
-    }
-
-    @IBAction func editButtonTouched(_ sender: Any) {
-        self.nameLabel.textColor = UIColor.blue
-        self.nameLabel.backgroundColor = UIColor.yellow
-        self.nameLabel.alpha = 0.5
-        self.descriptionLabel.text = "크루미션"
+        self.editButton.tintColor = .white
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? LoginViewController {
-            destination.nameText = self.nameLabel.text ?? "prapare에서 nil인 경우"
-            destination.descriptionText = self.descriptionLabel.text ?? "prepare에서 nil인 경우"
+        if let destination = segue.destination as? EditViewController {
+            destination.nameText = self.nameLabel.text ?? ""
+            destination.descriptionText = self.descriptionLabel.text ?? ""
+            destination.profileImageBefore = self.profileImage
+            destination.profileDelegate = self
         }
+    }
+    
+    func UpdateProfile(name: String, desc: String, imageView: UIImageView) {
+        self.nameLabel.text = name
+        self.descriptionLabel.text = desc
+        self.profileImage.image = imageView.image
     }
 }
 
