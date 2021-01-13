@@ -19,4 +19,14 @@
     
 <div><img scr = "https://user-images.githubusercontent.com/45382324/104281975-b0809380-54f1-11eb-803e-78715de70ae9.png"></div>
 
-4. 
+4. 프로필 수정 화면 구현 및 값 연동(1/13 22:32)
+
+    - 기본 화면에서 프로필 수정화면 전환 할 때 사진, 설명, 이름을 가져와 적용
+    - 사진 변경을 위해 UIImagePickerController 사용
+    - 변경 내용 저장을 위해 done클릭 시에 delegate 패턴을 이용해 값 전달
+    
+<div>
+<img width = "200" src = "https://user-images.githubusercontent.com/45382324/104458636-fec78c80-55ee-11eb-80de-6ac55e61eb43.png">
+<img width = "200" src = "https://user-images.githubusercontent.com/45382324/104458645-00915000-55ef-11eb-9774-14958c621251.png">
+<img width = "200" src = "https://user-images.githubusercontent.com/45382324/104458656-025b1380-55ef-11eb-97a7-594cc77a0d85.png">
+</div>
