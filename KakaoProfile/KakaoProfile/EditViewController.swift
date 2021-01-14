@@ -91,5 +91,7 @@ class EditViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     override func viewDidDisappear(_ animated: Bool) {
         print(#file, #line, #function, #column)
+        print(#file, #line, #function, #column)
+        print(#file, #line, #function, #column)
     }
 }

@@ -72,3 +72,11 @@ david의 README
 - make IBAction : doneButtonTouched
 - ViewController adapts protocol : ProfileDoneDelegate
 - ViewController implements method : UpdateProfile
+
+### commit : Embed a Navigation Controller
+
+- Embed a Navigation Controller in tem2
+
+  ![image-20210114113241480](README.assets/image-20210114113241480.png)
+
+  
