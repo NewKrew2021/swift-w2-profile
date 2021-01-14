@@ -52,7 +52,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonTouched:" destination="oFp-hW-Yhk" eventType="touchUpInside" id="i80-Cy-bgK"/>
+                                    <action selector="loginButtonTouched:" destination="oFp-hW-Yhk" eventType="touchUpInside" id="1gF-t6-1cc"/>
+                                    <segue destination="iYb-e4-EGg" kind="show" id="iEC-H6-udo"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-Z5-dqf">
@@ -93,6 +94,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhI-OK-0pR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="901.60000000000002" y="579.31034482758628"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="gAj-rn-OaW">
+            <objects>
+                <viewController id="iYb-e4-EGg" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iLT-5v-0dy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nV7-lp-BC3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ojr-Sl-XND"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="olV-3e-8Nb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702" y="579"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="Cow-IC-gE8">

@@ -101,4 +101,9 @@ david의 README
   - inputId
   - inputPassword
   
+  ### commit : make Main View
   
+  - make Main View Controller Scene
+  - make MainViewController.swift
+  - set the controller as custom class
+  - using segue, push MainView when the button touched
