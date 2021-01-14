@@ -7,21 +7,67 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Login View Controller-->
         <scene sceneID="4n1-Xg-wzU">
             <objects>
-                <viewController id="EcO-0W-6eX" sceneMemberID="viewController">
+                <viewController id="EcO-0W-6eX" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k7j-ll-7gz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tF-kZ-yS1">
+                                <rect key="frame" x="49" y="411" width="317" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2b-zX-V3M">
+                                <rect key="frame" x="332" y="411" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaJ-Ln-hAa">
+                                <rect key="frame" x="167" y="481" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTouched:" destination="EcO-0W-6eX" eventType="touchUpInside" id="SKT-zC-0Sv"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MAl-jy-kyB">
+                                <rect key="frame" x="122" y="155" width="171" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfF-wv-DJt">
+                                <rect key="frame" x="49" y="345" width="317" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJg-Sb-7oz">
+                                <rect key="frame" x="332" y="345" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="zd1-PC-X7O"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="snq-Hf-MDg"/>
+                    <navigationItem key="navigationItem" id="2qa-pt-ueu"/>
+                    <connections>
+                        <outlet property="IDTextField" destination="lfF-wv-DJt" id="QMP-bM-DPz"/>
+                        <outlet property="loginButton" destination="NaJ-Ln-hAa" id="H2d-34-VIH"/>
+                        <outlet property="passwordTextField" destination="5tF-kZ-yS1" id="mNW-fY-Plb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lia-oo-BVo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689" y="6"/>
+            <point key="canvasLocation" x="1598.5507246376812" y="5.3571428571428568"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="EKg-zY-YDI">
@@ -74,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="688.40579710144937" y="-642.1875"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Edit View Controller-->
         <scene sceneID="51I-Ed-Zv1">
             <objects>
-                <viewController id="IRo-Si-bCN" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IRo-Si-bCN" customClass="EditViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="61Y-3g-twK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,12 +223,65 @@
                     </tabBar>
                     <connections>
                         <segue destination="oJh-6X-JEF" kind="relationship" relationship="viewControllers" id="kcF-d4-aNr"/>
-                        <segue destination="EcO-0W-6eX" kind="relationship" relationship="viewControllers" id="NHM-Ox-72x"/>
+                        <segue destination="cr7-De-Njd" kind="relationship" relationship="viewControllers" id="NHM-Ox-72x"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWx-TT-coW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-230" y="-318"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="ZLt-RG-yGw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cr7-De-Njd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" id="snq-Hf-MDg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bG2-lx-MLy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EcO-0W-6eX" kind="relationship" relationship="rootViewController" id="bsG-qF-me6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRA-q9-ulm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.40579710144937" y="5.3571428571428568"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="44W-Zr-ewy">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" id="WKX-i7-mhu" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M5L-8l-aNQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a68-EJ-2vA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="a68-EJ-2vA" firstAttribute="top" secondItem="hO6-Fi-tvW" secondAttribute="top" id="GGC-eD-jns"/>
+                            <constraint firstItem="a68-EJ-2vA" firstAttribute="leading" secondItem="hO6-Fi-tvW" secondAttribute="leading" id="n8Q-Ne-Da3"/>
+                            <constraint firstItem="a68-EJ-2vA" firstAttribute="bottom" secondItem="hO6-Fi-tvW" secondAttribute="bottom" id="tzN-5q-Qme"/>
+                            <constraint firstItem="hO6-Fi-tvW" firstAttribute="trailing" secondItem="a68-EJ-2vA" secondAttribute="trailing" id="vEC-an-O7Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hO6-Fi-tvW"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="a68-EJ-2vA" id="wzW-Pe-J0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QbD-n1-uQn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2463.768115942029" y="4.6875"/>
         </scene>
     </scenes>
     <resources>
