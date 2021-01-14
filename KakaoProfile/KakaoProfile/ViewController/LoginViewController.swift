@@ -28,7 +28,8 @@ class LoginViewController: UIViewController {
         let checkUser = userInfo.checkUser(id: id.text ?? "", pw: password.text ?? "")
         switch checkUser {
         case .success:
-            showToast(controller: self, message: "\(UserInfo.CheckState.success)", seconds: 0.5)
+            guard let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainViewController") else { return }
+                            self.navigationController?.pushViewController(mainViewController, animated: true)
         case .blankID:
             showToast(controller: self, message: "\(UserInfo.CheckState.blankID)", seconds: 0.5)
         case .blankPw:

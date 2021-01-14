@@ -95,7 +95,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonClicked:" destination="0Na-c8-cK6" eventType="touchUpInside" id="FKV-Ui-9ih"/>
-                                    <segue destination="XO9-Ml-RoH" kind="push" id="GJn-XD-rm9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -236,12 +235,28 @@
         <!--뉴스-->
         <scene sceneID="TN9-P9-xrX">
             <objects>
-                <viewController id="XO9-Ml-RoH" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainViewController" id="XO9-Ml-RoH" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QsD-C1-MEc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Vc-e7-iqc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9iA-CO-YGN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9iA-CO-YGN" firstAttribute="bottom" secondItem="9Vc-e7-iqc" secondAttribute="bottom" id="Lkr-Ph-wP1"/>
+                            <constraint firstItem="9iA-CO-YGN" firstAttribute="trailing" secondItem="9Vc-e7-iqc" secondAttribute="trailing" id="XKa-vk-YdS"/>
+                            <constraint firstItem="9Vc-e7-iqc" firstAttribute="leading" secondItem="9iA-CO-YGN" secondAttribute="leading" id="YPg-hg-K5S"/>
+                            <constraint firstItem="9Vc-e7-iqc" firstAttribute="top" secondItem="9iA-CO-YGN" secondAttribute="top" id="gvC-EU-CT4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="뉴스" id="mWP-4E-H9U"/>
                 </viewController>
