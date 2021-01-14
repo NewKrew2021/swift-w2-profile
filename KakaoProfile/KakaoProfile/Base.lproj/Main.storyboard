@@ -67,6 +67,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kakao_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RGs-iQ-lT6">
+                                <rect key="frame" x="158" y="144" width="111" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ID" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Pr6-MI-Vdw">
                                 <rect key="frame" x="38" y="297" width="339" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -89,16 +93,19 @@
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="0Na-c8-cK6" eventType="touchUpInside" id="FKV-Ui-9ih"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kakao_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RGs-iQ-lT6">
-                                <rect key="frame" x="152" y="132" width="111" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zbV-fd-FPR"/>
                         <color key="backgroundColor" red="0.99652487040000004" green="0.91047090289999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="3V8-as-1xH"/>
+                    <connections>
+                        <outlet property="id" destination="Pr6-MI-Vdw" id="cwj-l0-Lb5"/>
+                        <outlet property="password" destination="dMH-bS-jCc" id="kk8-ar-mSa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTO-wX-179" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
