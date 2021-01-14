@@ -129,3 +129,17 @@ david의 README
   ### commit : modify the method that changes ViewController
   
   - change the method from segue to IBAction in order to implement the login logic
+
+### commit : add Login Logic
+
+- compare id and password with target string
+- if valid, push MainViewController
+- if not valid, present alert.
+- set isSecureTextEntry property of inputPassword to true
+
+![image-20210114175049648](README.assets/image-20210114175049648.png)
+
+![image-20210114175055155](README.assets/image-20210114175055155.png)
+
+
+
