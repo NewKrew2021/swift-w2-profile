@@ -11,15 +11,10 @@ import WebKit
 class MainViewController: UIViewController {
     
     var webView: WKWebView!
-
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
     }
-    
-}
-
-extension MainViewController: WKUIDelegate {
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +22,20 @@ extension MainViewController: WKUIDelegate {
             let myRequest = URLRequest(url: url)
             webView.load(myRequest)
         }
-        
+
     }
+
+}
+
+extension MainViewController: WKUIDelegate {
+    
 
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
         view = webView
+        print(view)
     }
+    
 }

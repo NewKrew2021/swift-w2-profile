@@ -75,7 +75,9 @@ class EditViewController: UIViewController, UINavigationControllerDelegate, UIIm
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let mediaType = info[UIImagePickerController.InfoKey.mediaType] as! NSString
         if mediaType.isEqual(to: kUTTypeImage as NSString as String) {
-            let captureImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+            guard let captureImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+                return
+            }
             self.profileImage.image = captureImage
         }
         self.dismiss(animated: true, completion: nil)

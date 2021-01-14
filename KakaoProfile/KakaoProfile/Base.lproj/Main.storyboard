@@ -97,7 +97,7 @@
         <!--뉴스-->
         <scene sceneID="gAj-rn-OaW">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iYb-e4-EGg" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="iYb-e4-EGg" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iLT-5v-0dy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,17 +111,25 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5S-QC-TTd">
+                                <rect key="frame" x="13" y="693" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="뒤로가기"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nV7-lp-BC3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="뉴스" id="Ojr-Sl-XND"/>
+                    <connections>
+                        <outlet property="backButton" destination="U5S-QC-TTd" id="2YP-Ux-pJ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olV-3e-8Nb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1701.5999999999999" y="578.57142857142856"/>
         </scene>
-        <!--Item 1-->
+        <!--프로필-->
         <scene sceneID="Cow-IC-gE8">
             <objects>
                 <viewController id="MC0-ik-gjM" customClass="ViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +171,7 @@
                             <constraint firstItem="yuk-HS-Ypn" firstAttribute="centerX" secondItem="htM-cg-3c2" secondAttribute="centerX" id="tdd-h9-e78"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="muM-P9-JXb"/>
+                    <tabBarItem key="tabBarItem" title="프로필" image="person" catalog="system" id="muM-P9-JXb"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="yuk-HS-Ypn" id="0ky-fn-ats"/>
                         <outlet property="editButton" destination="aq7-do-Obh" id="Gco-Og-e0c"/>
@@ -269,11 +277,11 @@
             </objects>
             <point key="canvasLocation" x="-930" y="275"/>
         </scene>
-        <!--Item 2-->
+        <!--로그인-->
         <scene sceneID="vCL-QT-AMv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7xl-qd-0NK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="69Q-CT-Gqm"/>
+                    <tabBarItem key="tabBarItem" title="로그인" image="key" catalog="system" id="69Q-CT-Gqm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NDf-ns-r6S">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -291,7 +299,9 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="key" catalog="system" width="86" height="128"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="profile_image" width="200" height="200"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

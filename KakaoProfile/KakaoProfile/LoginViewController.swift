@@ -18,10 +18,14 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         messageText.layer.zPosition = 1
         inputPassword.isSecureTextEntry = true
+        inputId.clearButtonMode = .whileEditing
+        inputPassword.clearButtonMode = .whileEditing
+        inputId.autocorrectionType = .no
+        inputPassword.autocorrectionType = .no
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func loginButtonTouched(_ sender: Any) {
@@ -34,7 +38,7 @@ class LoginViewController: UIViewController {
         }
         else {
             let alert = UIAlertController(title: "경고", message: "아이디와 비밀번호를 확인하세요", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "닫기", style: .destructive, handler: nil)
+            let defaultAction = UIAlertAction(title: "닫기", style: .default, handler: nil)
             alert.addAction(defaultAction)
             present(alert, animated: true, completion: nil)
         }

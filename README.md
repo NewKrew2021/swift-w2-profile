@@ -141,5 +141,10 @@ david의 README
 
 ![image-20210114175055155](README.assets/image-20210114175055155.png)
 
+### commit : modify : tab bar
 
+- modify tab bar icon
+- modify tab bar title
+
+![image-20210114204930571](README.assets/image-20210114204930571.png)
 
