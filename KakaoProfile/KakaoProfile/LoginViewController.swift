@@ -9,10 +9,17 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var messageImage: UIImageView!
+    @IBOutlet weak var messageText: UILabel!
+    @IBOutlet weak var inputId: UITextField!
+    @IBOutlet weak var inputPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        messageText.layer.zPosition = 1
         // Do any additional setup after loading the view.
     }
+    
+    
     
 }

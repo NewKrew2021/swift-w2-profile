@@ -92,4 +92,13 @@ david의 README
   - add TextField
   - add Button
   
+  ![image-20210114134415515](README.assets/image-20210114134415515.png)
+  
+  ### commit : connect IBOutlet
+  
+  - messageImage
+  - messageText : for setting zindex
+  - inputId
+  - inputPassword
+  
   

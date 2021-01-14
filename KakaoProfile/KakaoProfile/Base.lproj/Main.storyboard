@@ -32,14 +32,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="message.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-Z5-dqf">
-                                <rect key="frame" x="67" y="169.66666666666652" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.2196078431372549" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TALK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9F-gM-nHv">
-                                <rect key="frame" x="137" y="196" width="100" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TALK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9F-gM-nHv">
+                                <rect key="frame" x="137.66666666666666" y="179" width="100" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="MSL-3t-2jP"/>
+                                    <constraint firstAttribute="width" constant="100" id="r2K-aB-8jY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" red="0.96078431372549022" green="0.88235294117647056" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" systemColor="labelColor"/>
@@ -53,7 +51,18 @@
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonTouched:" destination="oFp-hW-Yhk" eventType="touchUpInside" id="i80-Cy-bgK"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-Z5-dqf">
+                                <rect key="frame" x="67.666666666666686" y="154.66666666666666" width="240" height="128"/>
+                                <color key="tintColor" red="0.2196078431372549" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="8tQ-6P-PaM"/>
+                                    <constraint firstAttribute="width" constant="240" id="HK1-8F-928"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eJs-Gn-yot"/>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.88235294119999996" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,11 +71,24 @@
                             <constraint firstItem="eHG-AA-USI" firstAttribute="centerX" secondItem="fhk-vD-mvY" secondAttribute="centerX" id="CeK-nb-VV4"/>
                             <constraint firstItem="bBG-Ia-KIa" firstAttribute="centerX" secondItem="fhk-vD-mvY" secondAttribute="centerX" id="JTX-qG-2BV"/>
                             <constraint firstItem="bBG-Ia-KIa" firstAttribute="top" secondItem="4Q3-YW-sZZ" secondAttribute="bottom" constant="26" id="Kli-o9-1JF"/>
+                            <constraint firstItem="f9F-gM-nHv" firstAttribute="top" secondItem="eJs-Gn-yot" secondAttribute="top" constant="91" id="PVC-s6-rcf"/>
+                            <constraint firstItem="f9F-gM-nHv" firstAttribute="centerX" secondItem="fhk-vD-mvY" secondAttribute="centerX" id="S9L-Hf-FtO"/>
+                            <constraint firstItem="uFg-Z5-dqf" firstAttribute="centerX" secondItem="fhk-vD-mvY" secondAttribute="centerX" id="fMm-zk-fiC"/>
                             <constraint firstItem="4Q3-YW-sZZ" firstAttribute="top" secondItem="fhk-vD-mvY" secondAttribute="topMargin" constant="250" id="iLS-jo-BZS"/>
                             <constraint firstItem="4Q3-YW-sZZ" firstAttribute="centerX" secondItem="fhk-vD-mvY" secondAttribute="centerX" id="pjP-hf-2D9"/>
+                            <constraint firstItem="uFg-Z5-dqf" firstAttribute="top" secondItem="fhk-vD-mvY" secondAttribute="topMargin" constant="66" id="qUy-bR-7Io"/>
+                            <constraint firstItem="uFg-Z5-dqf" firstAttribute="centerX" secondItem="fhk-vD-mvY" secondAttribute="centerX" id="xA3-n1-Ujo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aHI-pN-Gk1"/>
+                    <connections>
+                        <outlet property="MessageImage" destination="uFg-Z5-dqf" id="bSI-aI-55e"/>
+                        <outlet property="MessageText" destination="f9F-gM-nHv" id="l8v-jy-dD8"/>
+                        <outlet property="inputId" destination="4Q3-YW-sZZ" id="A0c-6i-qvL"/>
+                        <outlet property="inputPassword" destination="bBG-Ia-KIa" id="XWA-GU-gfO"/>
+                        <outlet property="messageImage" destination="uFg-Z5-dqf" id="qtX-xC-BSd"/>
+                        <outlet property="messageText" destination="f9F-gM-nHv" id="R97-zX-VpQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhI-OK-0pR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
