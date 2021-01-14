@@ -162,5 +162,10 @@ david의 README
 
 ![image-20210114224859609](README.assets/image-20210114224859609.png)
 
+### commit : feedback -> modify
 
+- early exit
+- delete unused method
+- remake useless hard codes
+- call method of super class when overriding
 
