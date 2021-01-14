@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--로그인-->
+        <!--View Controller-->
         <scene sceneID="ios-qX-53Y">
             <objects>
                 <viewController id="F1q-nD-Ni7" sceneMemberID="viewController">
@@ -18,11 +18,11 @@
                         <viewLayoutGuide key="safeArea" id="sze-2U-OmR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="로그인" image="l.square.fill" catalog="system" id="wOC-e3-D2h"/>
+                    <navigationItem key="navigationItem" id="VUf-f8-zKo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYT-RM-cDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1096" y="154"/>
+            <point key="canvasLocation" x="-167.69230769230768" y="153.55450236966823"/>
         </scene>
         <!--프로필-->
         <scene sceneID="dfP-CW-OVm">
@@ -166,12 +166,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="GPn-A6-vFZ" kind="relationship" relationship="viewControllers" id="L4S-6l-0jb"/>
-                        <segue destination="F1q-nD-Ni7" kind="relationship" relationship="viewControllers" id="c8T-gt-puo"/>
+                        <segue destination="SKP-vr-7Kt" kind="relationship" relationship="viewControllers" id="c8T-gt-puo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALQ-ua-b0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2184" y="-205"/>
+        </scene>
+        <!--로그인-->
+        <scene sceneID="Hl6-9l-aMG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SKP-vr-7Kt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="로그인" image="l.square.fill" catalog="system" id="wOC-e3-D2h"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0U1-EE-kIc">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="F1q-nD-Ni7" kind="relationship" relationship="rootViewController" id="Z2c-hR-zc8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBD-KM-pc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1096.9230769230769" y="153.55450236966823"/>
         </scene>
     </scenes>
     <resources>
