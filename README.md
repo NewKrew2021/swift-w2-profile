@@ -72,3 +72,100 @@ david의 README
 - make IBAction : doneButtonTouched
 - ViewController adapts protocol : ProfileDoneDelegate
 - ViewController implements method : UpdateProfile
+
+### commit : Embed a Navigation Controller
+
+- Embed a Navigation Controller in tem2
+
+  ![image-20210114113241480](README.assets/image-20210114113241480.png)
+
+  ### commit : make LoginViewController
+  
+  - make LoginViewController.swift
+  - set the controller as the Cunstom class of Navigation Controller
+  
+  ![image-20210114114209776](README.assets/image-20210114114209776.png)
+  
+  ### commit : Add some elements
+  
+  - add Image
+  - add TextField
+  - add Button
+  
+  ![image-20210114134415515](README.assets/image-20210114134415515.png)
+  
+  ### commit : connect IBOutlet
+  
+  - messageImage
+  - messageText : for setting zindex
+  - inputId
+  - inputPassword
+  
+  ### commit : make Main View
+  
+  - make Main View Controller Scene
+  - make MainViewController.swift
+  - set the controller as custom class
+  - using segue, push MainView when the button touched
+  
+  ### commit : WKWebView
+  
+  - fulfill the MainViewController with WebKit WebView
+  - using WKWebView object, present web page into app's UI
+  
+  ![image-20210114155057064](README.assets/image-20210114155057064.png)
+  
+  ![image-20210114155024508](README.assets/image-20210114155024508.png)
+  
+  ### commit : some modification
+  
+  - naviBar hidden on/off
+  - add naviBar Title
+  
+  ![image-20210114170956500](README.assets/image-20210114170956500.png)
+  
+  ![image-20210114171002577](README.assets/image-20210114171002577.png)
+  
+  ### commit : modify the method that changes ViewController
+  
+  - change the method from segue to IBAction in order to implement the login logic
+
+### commit : add Login Logic
+
+- compare id and password with target string
+- if valid, push MainViewController
+- if not valid, present alert.
+- set isSecureTextEntry property of inputPassword to true
+
+![image-20210114175049648](README.assets/image-20210114175049648.png)
+
+![image-20210114175055155](README.assets/image-20210114175055155.png)
+
+### commit : modify : tab bar
+
+- modify tab bar icon
+- modify tab bar title
+
+![image-20210114204930571](README.assets/image-20210114204930571.png)
+
+### commit : Remake Login Logic
+
+- make enum VaildateType
+- make method : validateAccount()
+- make method : ShowAlert
+
+![image-20210114224813738](README.assets/image-20210114224813738.png)
+
+![image-20210114224832715](README.assets/image-20210114224832715.png)
+
+![image-20210114224848117](README.assets/image-20210114224848117.png)
+
+![image-20210114224859609](README.assets/image-20210114224859609.png)
+
+### commit : feedback -> modify
+
+- early exit
+- delete unused method
+- remake useless hard codes
+- call method of super class when overriding
+

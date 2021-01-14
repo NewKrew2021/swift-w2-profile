@@ -73,9 +73,11 @@ class EditViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let captureImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            return
+        }
         let mediaType = info[UIImagePickerController.InfoKey.mediaType] as! NSString
         if mediaType.isEqual(to: kUTTypeImage as NSString as String) {
-            let captureImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
             self.profileImage.image = captureImage
         }
         self.dismiss(animated: true, completion: nil)
@@ -90,6 +92,8 @@ class EditViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        print(#file, #line, #function, #column)
+        print(#file, #line, #function, #column)
         print(#file, #line, #function, #column)
     }
 }
