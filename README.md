@@ -33,3 +33,11 @@
 
 ![Simulator Screen Shot - iPhone 11 - 2021-01-13 at 19 10 16](https://user-images.githubusercontent.com/28801805/104438485-6374ee00-55d3-11eb-8d4e-22fba81f61c6.png)
 ![Simulator Screen Shot - iPhone 11 - 2021-01-13 at 19 10 29](https://user-images.githubusercontent.com/28801805/104438486-64a61b00-55d3-11eb-96fc-f0874d72ab59.png)
+
+6. make LoginVC, mainVC
+- LoginVC, mainVC 생성
+- Navigation Controller로 loginVC, mainVC 연결
+- mainVC WebView 구현
+
+![Simulator Screen Shot - iPhone 11 - 2021-01-14 at 18 14 22](https://user-images.githubusercontent.com/28801805/104569845-8e734680-5694-11eb-9873-3635e461f329.png)
+![Simulator Screen Shot - iPhone 11 - 2021-01-14 at 18 14 28](https://user-images.githubusercontent.com/28801805/104569849-903d0a00-5694-11eb-86d6-9867beab778e.png)

@@ -34,7 +34,7 @@ class ViewController: UIViewController {
        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if let destination = segue.destination as? LoginViewController {
+        if let destination = segue.destination as? EditViewController {
             destination.nameText = self.nameLabel.text!
             destination.descriptionText = self.descriptionLabel.text!
             destination.delegate = self
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 
 extension ViewController: SendDataDelegate {
     
-    func sendData(name: String, description: String, image: UIImage) {
+    func sendData(name: String, description: String, image: UIImage?) {
         self.nameLabel.text = name
         self.descriptionLabel.text = description
         self.profileImage.image = image

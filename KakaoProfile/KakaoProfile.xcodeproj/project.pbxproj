@@ -15,7 +15,10 @@
 		438F35ED25AC5A5100138E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F35EB25AC5A5100138E3D /* LaunchScreen.storyboard */; };
 		438F35F825AC5A5100138E3D /* KakaoProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F35F725AC5A5100138E3D /* KakaoProfileTests.swift */; };
 		438F360325AC5A5100138E3D /* KakaoProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F360225AC5A5100138E3D /* KakaoProfileUITests.swift */; };
-		438F361125AD685200138E3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F361025AD685200138E3D /* LoginViewController.swift */; };
+		438F361125AD685200138E3D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F361025AD685200138E3D /* EditViewController.swift */; };
+		438F361325AFE82800138E3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F361225AFE82800138E3D /* LoginViewController.swift */; };
+		438F361525AFF01500138E3D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F361425AFF01500138E3D /* MainViewController.swift */; };
+		438F361825B0016B00138E3D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F361725B0016B00138E3D /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +53,10 @@
 		438F35FE25AC5A5100138E3D /* KakaoProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		438F360225AC5A5100138E3D /* KakaoProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoProfileUITests.swift; sourceTree = "<group>"; };
 		438F360425AC5A5100138E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		438F361025AD685200138E3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		438F361025AD685200138E3D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		438F361225AFE82800138E3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		438F361425AFF01500138E3D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		438F361725B0016B00138E3D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438F361825B0016B00138E3D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +92,7 @@
 				438F35F625AC5A5100138E3D /* KakaoProfileTests */,
 				438F360125AC5A5100138E3D /* KakaoProfileUITests */,
 				438F35DE25AC5A5000138E3D /* Products */,
+				438F361625B0016B00138E3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,7 +112,9 @@
 				438F35E025AC5A5000138E3D /* AppDelegate.swift */,
 				438F35E225AC5A5000138E3D /* SceneDelegate.swift */,
 				438F35E425AC5A5000138E3D /* ViewController.swift */,
-				438F361025AD685200138E3D /* LoginViewController.swift */,
+				438F361025AD685200138E3D /* EditViewController.swift */,
+				438F361225AFE82800138E3D /* LoginViewController.swift */,
+				438F361425AFF01500138E3D /* MainViewController.swift */,
 				438F35E625AC5A5000138E3D /* Main.storyboard */,
 				438F35E925AC5A5100138E3D /* Assets.xcassets */,
 				438F35EB25AC5A5100138E3D /* LaunchScreen.storyboard */,
@@ -129,6 +139,14 @@
 				438F360425AC5A5100138E3D /* Info.plist */,
 			);
 			path = KakaoProfileUITests;
+			sourceTree = "<group>";
+		};
+		438F361625B0016B00138E3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438F361725B0016B00138E3D /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438F361125AD685200138E3D /* LoginViewController.swift in Sources */,
+				438F361125AD685200138E3D /* EditViewController.swift in Sources */,
 				438F35E525AC5A5000138E3D /* ViewController.swift in Sources */,
 				438F35E125AC5A5000138E3D /* AppDelegate.swift in Sources */,
+				438F361525AFF01500138E3D /* MainViewController.swift in Sources */,
 				438F35E325AC5A5000138E3D /* SceneDelegate.swift in Sources */,
+				438F361325AFE82800138E3D /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

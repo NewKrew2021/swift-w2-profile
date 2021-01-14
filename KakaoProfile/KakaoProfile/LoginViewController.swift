@@ -1,84 +1,59 @@
 //
-//  LoginViewController.swift
+//  MainViewController.swift
 //  KakaoProfile
 //
-//  Created by herb.salt on 2021/01/12.
+//  Created by herb.salt on 2021/01/14.
 //  Copyright © 2021 com.kakaocorp. All rights reserved.
 //
 
 import UIKit
 
-protocol SendDataDelegate {
-    func sendData(name: String, description: String, image: UIImage)
-}
-
 class LoginViewController: UIViewController {
     
-    var nameText: String = ""
-    var descriptionText: String = ""
-    let picker = UIImagePickerController()
-    var delegate: SendDataDelegate?
+    enum ValidateType {
+        case lack
+        case equal
+        case notEqual
+    }
+
+    @IBOutlet weak var IDTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
-    @IBOutlet weak var selectImageButton: UIButton!
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var profileImageView: UIImageView!
-    
-    override func viewDidLoad() {
-        
+    override func viewDidLoad(){
         super.viewDidLoad()
-        selectImageButton.layer.cornerRadius = selectImageButton.layer.frame.size.width/2
-        nameTextField.text = nameText
-        descriptionTextField.text = descriptionText
-        picker.delegate = self
-
     }
     
-    @IBAction func selectImageButtonTouched(_ sender: Any) {
+    private func loginCheck() -> ValidateType {
         
-        picker.sourceType = .photoLibrary
-        present(picker, animated: true, completion: nil)
+        guard let id = IDTextField.text, let password = passwordTextField.text else { return .lack }
         
-    }
-    @IBAction func finishButtonTouched(_ sender: Any) {
-        
-        self.delegate?.sendData(name: nameTextField.text!, description: descriptionTextField.text!, image: profileImageView.image!)
-        self.dismiss(animated: true, completion: nil)
-        
-    }
-    
-    @IBAction func cancelButtonTouched(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        print(#file, #line, #function, #column)
-    }
-    
-}
-
-extension LoginViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        if let image = info[UIImagePickerController.InfoKey.originalImage] {
-            profileImageView.image = image as! UIImage
+        if id == "" && password == "" {
+            return .lack
         }
-        dismiss(animated: true, completion: nil)
+        else if id == "herb" && password == "salt" {
+            return .equal
+        }
+        else {
+            return .notEqual
+        }
         
     }
     
+    @IBAction func loginButtonTouched(_ sender: Any) {
+        
+        switch loginCheck() {
+        case .lack :
+            print("아이디와 비밀번호를 입력해주세요.")
+        case .equal :
+            print("로그인에 성공했습니다.")
+            if let mainVC = self.storyboard?.instantiateViewController(identifier: "MainVC") {
+                self.navigationController?.pushViewController(mainVC, animated: true)
+            }
+        case .notEqual :
+            print("아이디와 비밀번호가 일치하지 않습니다.")
+        }
+        
+    }
+
 }
