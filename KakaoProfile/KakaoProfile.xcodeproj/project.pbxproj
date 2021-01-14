@@ -20,6 +20,7 @@
 		F7836F7325AC38E200019352 /* KakaoProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7836F7225AC38E200019352 /* KakaoProfileTests.swift */; };
 		F7836F7E25AC38E200019352 /* KakaoProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7836F7D25AC38E200019352 /* KakaoProfileUITests.swift */; };
 		F78624F225AD43A100FF4959 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78624F125AD43A100FF4959 /* EditViewController.swift */; };
+		F78A13C825B0407A003F4D1E /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78A13C725B0407A003F4D1E /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F7836F7D25AC38E200019352 /* KakaoProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoProfileUITests.swift; sourceTree = "<group>"; };
 		F7836F7F25AC38E200019352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F78624F125AD43A100FF4959 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		F78A13C725B0407A003F4D1E /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		F7836F5A25AC38E200019352 /* KakaoProfile */ = {
 			isa = PBXGroup;
 			children = (
+				F78A13C625B04063003F4D1E /* extension */,
 				F728CB5625AEE9C0000737C2 /* Model */,
 				F728CB5025AEE512000737C2 /* Protocol */,
 				F7836F5B25AC38E200019352 /* AppDelegate.swift */,
@@ -157,6 +160,14 @@
 				F7836F7F25AC38E200019352 /* Info.plist */,
 			);
 			path = KakaoProfileUITests;
+			sourceTree = "<group>";
+		};
+		F78A13C625B04063003F4D1E /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				F78A13C725B0407A003F4D1E /* UIView+.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 				F7836F6025AC38E200019352 /* ViewController.swift in Sources */,
 				F728CB5225AEE559000737C2 /* SendDataProtocol.swift in Sources */,
 				F7836F5C25AC38E200019352 /* AppDelegate.swift in Sources */,
+				F78A13C825B0407A003F4D1E /* UIView+.swift in Sources */,
 				F7836F5E25AC38E200019352 /* SceneDelegate.swift in Sources */,
 				F728CB7F25AFFD25000737C2 /* MainViewController.swift in Sources */,
 			);

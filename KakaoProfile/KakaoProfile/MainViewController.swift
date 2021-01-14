@@ -19,6 +19,7 @@ class MainViewController: UIViewController, WKUIDelegate {
         view = webView
         self.navigationController?.navigationBar.isHidden = false
         self.navigationItem.title = "뉴스"
+        webView.title
 //        print()
         }
     
