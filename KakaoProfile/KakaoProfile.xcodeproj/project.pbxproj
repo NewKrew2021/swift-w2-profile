@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F728CB5225AEE559000737C2 /* SendDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728CB5125AEE559000737C2 /* SendDataProtocol.swift */; };
 		F728CB6125AEEA13000737C2 /* ProfileDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728CB6025AEEA13000737C2 /* ProfileDto.swift */; };
+		F728CB7A25AFE2A7000737C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728CB7925AFE2A7000737C2 /* LoginViewController.swift */; };
 		F7836F5C25AC38E200019352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7836F5B25AC38E200019352 /* AppDelegate.swift */; };
 		F7836F5E25AC38E200019352 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7836F5D25AC38E200019352 /* SceneDelegate.swift */; };
 		F7836F6025AC38E200019352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7836F5F25AC38E200019352 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		F728CB5125AEE559000737C2 /* SendDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataProtocol.swift; sourceTree = "<group>"; };
 		F728CB6025AEEA13000737C2 /* ProfileDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDto.swift; sourceTree = "<group>"; };
+		F728CB7925AFE2A7000737C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F7836F5825AC38E200019352 /* KakaoProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7836F5B25AC38E200019352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7836F5D25AC38E200019352 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				F7836F6625AC38E200019352 /* LaunchScreen.storyboard */,
 				F7836F6925AC38E200019352 /* Info.plist */,
 				F78624F125AD43A100FF4959 /* EditViewController.swift */,
+				F728CB7925AFE2A7000737C2 /* LoginViewController.swift */,
 			);
 			path = KakaoProfile;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F728CB7A25AFE2A7000737C2 /* LoginViewController.swift in Sources */,
 				F78624F225AD43A100FF4959 /* EditViewController.swift in Sources */,
 				F728CB6125AEEA13000737C2 /* ProfileDto.swift in Sources */,
 				F7836F6025AC38E200019352 /* ViewController.swift in Sources */,
