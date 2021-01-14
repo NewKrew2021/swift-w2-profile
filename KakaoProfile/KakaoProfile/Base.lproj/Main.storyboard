@@ -15,8 +15,56 @@
                     <view key="view" contentMode="scaleToFill" id="fhk-vD-mvY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Q3-YW-sZZ">
+                                <rect key="frame" x="60" y="338" width="255" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="6fp-Ud-Nah"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bBG-Ia-KIa">
+                                <rect key="frame" x="60" y="398" width="255" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="aoa-m4-JO0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="message.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-Z5-dqf">
+                                <rect key="frame" x="67" y="169.66666666666652" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.2196078431372549" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TALK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9F-gM-nHv">
+                                <rect key="frame" x="137" y="196" width="100" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" red="0.96078431372549022" green="0.88235294117647056" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" systemColor="labelColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHG-AA-USI">
+                                <rect key="frame" x="155.66666666666666" y="474" width="64" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="LAs-kZ-Pvi"/>
+                                </constraints>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eJs-Gn-yot"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.88235294119999996" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eHG-AA-USI" firstAttribute="top" secondItem="bBG-Ia-KIa" secondAttribute="bottom" constant="42" id="0gM-r2-RT8"/>
+                            <constraint firstItem="eHG-AA-USI" firstAttribute="centerX" secondItem="fhk-vD-mvY" secondAttribute="centerX" id="CeK-nb-VV4"/>
+                            <constraint firstItem="bBG-Ia-KIa" firstAttribute="centerX" secondItem="fhk-vD-mvY" secondAttribute="centerX" id="JTX-qG-2BV"/>
+                            <constraint firstItem="bBG-Ia-KIa" firstAttribute="top" secondItem="4Q3-YW-sZZ" secondAttribute="bottom" constant="26" id="Kli-o9-1JF"/>
+                            <constraint firstItem="4Q3-YW-sZZ" firstAttribute="top" secondItem="fhk-vD-mvY" secondAttribute="topMargin" constant="250" id="iLS-jo-BZS"/>
+                            <constraint firstItem="4Q3-YW-sZZ" firstAttribute="centerX" secondItem="fhk-vD-mvY" secondAttribute="centerX" id="pjP-hf-2D9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aHI-pN-Gk1"/>
                 </viewController>
@@ -194,7 +242,11 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="profile_image" width="200" height="200"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

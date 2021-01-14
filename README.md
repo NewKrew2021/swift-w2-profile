@@ -86,4 +86,10 @@ david의 README
   
   ![image-20210114114209776](README.assets/image-20210114114209776.png)
   
+  ### commit : Add some elements
+  
+  - add Image
+  - add TextField
+  - add Button
+  
   
