@@ -95,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="901.60000000000002" y="579.31034482758628"/>
         </scene>
-        <!--Main View Controller-->
+        <!--뉴스-->
         <scene sceneID="gAj-rn-OaW">
             <objects>
                 <viewController id="iYb-e4-EGg" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
@@ -116,7 +116,7 @@
                         <viewLayoutGuide key="safeArea" id="nV7-lp-BC3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ojr-Sl-XND"/>
+                    <navigationItem key="navigationItem" title="뉴스" id="Ojr-Sl-XND"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olV-3e-8Nb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

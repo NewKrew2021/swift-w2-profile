@@ -112,4 +112,18 @@ david의 README
   
   - fulfill the MainViewController with WebKit WebView
   - using WKWebView object, present web page into app's UI
-
+  
+  ![image-20210114155057064](README.assets/image-20210114155057064.png)
+  
+  ![image-20210114155024508](README.assets/image-20210114155024508.png)
+  
+  ### commit : some modification
+  
+  - naviBar hidden on/off
+  - add naviBar Title
+  
+  ![image-20210114170956500](README.assets/image-20210114170956500.png)
+  
+  ![image-20210114171002577](README.assets/image-20210114171002577.png)
+  
+  
