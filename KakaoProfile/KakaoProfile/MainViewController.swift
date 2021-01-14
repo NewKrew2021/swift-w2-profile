@@ -8,16 +8,18 @@
 import UIKit
 import WebKit
 
-class MainViewController: UIViewController, WKUIDelegate {
+class MainViewController: UIViewController {
     
     var webView: WKWebView!
-    
-    override func loadView() {
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
-        view = webView
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
+    
+}
+
+extension MainViewController: WKUIDelegate {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +29,11 @@ class MainViewController: UIViewController, WKUIDelegate {
         }
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
+
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
     }
-    
 }

@@ -126,4 +126,6 @@ david의 README
   
   ![image-20210114171002577](README.assets/image-20210114171002577.png)
   
+  ### commit : modify the method that changes ViewController
   
+  - change the method from segue to IBAction in order to implement the login logic

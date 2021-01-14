@@ -24,7 +24,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTouched(_ sender: Any) {
-        
+        if let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") {
+        self.navigationController?.pushViewController(pushVC, animated: true)
+        }
     }
     
     
