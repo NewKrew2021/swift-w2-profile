@@ -8,21 +8,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--로그인-->
+        <!--Login View Controller-->
         <scene sceneID="ios-qX-53Y">
             <objects>
-                <viewController id="F1q-nD-Ni7" sceneMemberID="viewController">
+                <viewController id="F1q-nD-Ni7" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IJU-yD-DzG">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Kakao_logo" translatesAutoresizingMaskIntoConstraints="NO" id="o5n-cM-mpW">
+                                <rect key="frame" x="45" y="145" width="300" height="128"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Daa-cm-cp1">
+                                <rect key="frame" x="75" y="358" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lY1-Vg-BMo">
+                                <rect key="frame" x="75" y="414" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-8E-X7M">
+                                <rect key="frame" x="160" y="481" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkLogin:" destination="F1q-nD-Ni7" eventType="touchUpInside" id="w8K-Jv-7N3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sze-2U-OmR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98908764120000003" green="0.89003902670000001" blue="0.19086566569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lY1-Vg-BMo" firstAttribute="centerX" secondItem="Daa-cm-cp1" secondAttribute="centerX" id="9ia-sN-dld"/>
+                            <constraint firstItem="o5n-cM-mpW" firstAttribute="centerX" secondItem="IJU-yD-DzG" secondAttribute="centerX" id="LVD-Vc-Dhy"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="로그인" image="l.square.fill" catalog="system" id="wOC-e3-D2h"/>
+                    <navigationItem key="navigationItem" id="RSs-yI-shi"/>
+                    <connections>
+                        <outlet property="loginId" destination="Daa-cm-cp1" id="9vk-mv-oJv"/>
+                        <outlet property="loginPassword" destination="lY1-Vg-BMo" id="0Mj-0M-1xY"/>
+                        <outlet property="view" destination="IJU-yD-DzG" id="yXn-Xu-frJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYT-RM-cDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1096" y="154"/>
+            <point key="canvasLocation" x="-167.69230769230768" y="153.55450236966823"/>
+        </scene>
+        <!--뉴스-->
+        <scene sceneID="HuE-tV-uF8">
+            <objects>
+                <viewController id="efm-L4-Npy" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QMM-dt-tdY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lug-Od-6i4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="뉴스" id="asE-mP-Jkg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wsb-8q-iJs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596.92307692307691" y="153.55450236966823"/>
         </scene>
         <!--프로필-->
         <scene sceneID="dfP-CW-OVm">
@@ -166,95 +217,35 @@
                     </tabBar>
                     <connections>
                         <segue destination="GPn-A6-vFZ" kind="relationship" relationship="viewControllers" id="L4S-6l-0jb"/>
-                        <segue destination="F1q-nD-Ni7" kind="relationship" relationship="viewControllers" id="c8T-gt-puo"/>
+                        <segue destination="e39-yX-ryO" kind="relationship" relationship="viewControllers" id="c8T-gt-puo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALQ-ua-b0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2184" y="-205"/>
         </scene>
-        <!--Edit View Controller-->
-        <scene sceneID="9YU-ZW-vcF">
+        <!--로그인-->
+        <scene sceneID="Eqh-Bc-Kuf">
             <objects>
-                <viewController id="caL-9j-uj2" customClass="EditViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wfo-b7-p3v">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="프로필" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nL7-Uu-4Rn">
-                                <rect key="frame" x="168" y="22" width="55" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylb-Hf-17U">
-                                <rect key="frame" x="333" y="20" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeFinished:" destination="caL-9j-uj2" eventType="touchUpInside" id="UE7-S5-AWz"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gHb-86-rK2">
-                                <rect key="frame" x="58" y="658" width="275" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oMH-th-YTc">
-                                <rect key="frame" x="58" y="616" width="275" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9lT-iI-4DH">
-                                <rect key="frame" x="145" y="494" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a67-FA-hnl">
-                                <rect key="frame" x="19" y="20" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelTouched:" destination="caL-9j-uj2" eventType="touchUpInside" id="bSM-sX-Nxg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocV-0s-aof">
-                                <rect key="frame" x="215" y="564" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="camera.circle.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="selectImageButtonTouched:" destination="caL-9j-uj2" eventType="touchUpInside" id="eOj-qE-x4I"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Dhy-sO-UNQ"/>
-                        <color key="backgroundColor" red="0.52715872389999996" green="0.60152969489999997" blue="0.66454825129999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="tintColor" systemColor="linkColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="KiW-VI-xvH"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e39-yX-ryO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="로그인" image="l.square.fill" catalog="system" id="wOC-e3-D2h"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kYO-yL-Wor">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <outlet property="editImage" destination="ocV-0s-aof" id="p4u-B6-8yr"/>
-                        <outlet property="profileDescription" destination="gHb-86-rK2" id="NMq-Wr-1a0"/>
-                        <outlet property="profileImage" destination="9lT-iI-4DH" id="TWN-QM-x9r"/>
-                        <outlet property="profileName" destination="oMH-th-YTc" id="6Q3-sl-Qfz"/>
+                        <segue destination="F1q-nD-Ni7" kind="relationship" relationship="rootViewController" id="AnE-23-VdK"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UCc-ZO-Sld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mCN-FF-nLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258.46153846153845" y="-540.99526066350711"/>
+            <point key="canvasLocation" x="-1096.9230769230769" y="153.55450236966823"/>
         </scene>
     </scenes>
     <resources>
-        <image name="camera.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="Kakao_logo" width="300" height="300"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="krew-image" width="66.666664123535156" height="66.666664123535156"/>
         <image name="l.square.fill" catalog="system" width="128" height="114"/>
