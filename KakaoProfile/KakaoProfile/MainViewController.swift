@@ -35,7 +35,6 @@ extension MainViewController: WKUIDelegate {
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
         view = webView
-        print(view)
     }
     
 }

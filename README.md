@@ -148,3 +148,19 @@ david의 README
 
 ![image-20210114204930571](README.assets/image-20210114204930571.png)
 
+### commit : Remake Login Logic
+
+- make enum VaildateType
+- make method : validateAccount()
+- make method : ShowAlert
+
+![image-20210114224813738](README.assets/image-20210114224813738.png)
+
+![image-20210114224832715](README.assets/image-20210114224832715.png)
+
+![image-20210114224848117](README.assets/image-20210114224848117.png)
+
+![image-20210114224859609](README.assets/image-20210114224859609.png)
+
+
+
