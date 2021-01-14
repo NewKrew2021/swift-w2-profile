@@ -37,8 +37,6 @@ class LoginViewController: UIViewController {
             showToast(controller: self, message: "\(UserInfo.CheckState.noID)", seconds: 0.5)
         case .wrongPw:
             showToast(controller: self, message: "\(UserInfo.CheckState.wrongPw)", seconds: 0.5)
-        default:
-            print("")
         }
     }
 }
