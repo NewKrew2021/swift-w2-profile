@@ -8,21 +8,71 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="ios-qX-53Y">
             <objects>
-                <viewController id="F1q-nD-Ni7" sceneMemberID="viewController">
+                <viewController id="F1q-nD-Ni7" customClass="LoginViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IJU-yD-DzG">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o5n-cM-mpW">
+                                <rect key="frame" x="75" y="145" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Daa-cm-cp1">
+                                <rect key="frame" x="75" y="358" width="240" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lY1-Vg-BMo">
+                                <rect key="frame" x="75" y="414" width="240" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-8E-X7M">
+                                <rect key="frame" x="160" y="481" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkLogin:" destination="F1q-nD-Ni7" eventType="touchUpInside" id="w8K-Jv-7N3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sze-2U-OmR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.92922047965294374" blue="0.16185525482815832" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VUf-f8-zKo"/>
+                    <navigationItem key="navigationItem" id="RSs-yI-shi"/>
+                    <connections>
+                        <outlet property="loginId" destination="Daa-cm-cp1" id="9vk-mv-oJv"/>
+                        <outlet property="loginPassword" destination="lY1-Vg-BMo" id="0Mj-0M-1xY"/>
+                        <outlet property="view" destination="IJU-yD-DzG" id="yXn-Xu-frJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYT-RM-cDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-167.69230769230768" y="153.55450236966823"/>
+        </scene>
+        <!--뉴스-->
+        <scene sceneID="HuE-tV-uF8">
+            <objects>
+                <viewController id="efm-L4-Npy" customClass="MainViewController" customModule="KakaoProfile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QMM-dt-tdY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lug-Od-6i4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="뉴스" id="asE-mP-Jkg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wsb-8q-iJs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596.92307692307691" y="153.55450236966823"/>
         </scene>
         <!--프로필-->
         <scene sceneID="dfP-CW-OVm">
@@ -166,7 +216,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="GPn-A6-vFZ" kind="relationship" relationship="viewControllers" id="L4S-6l-0jb"/>
-                        <segue destination="SKP-vr-7Kt" kind="relationship" relationship="viewControllers" id="c8T-gt-puo"/>
+                        <segue destination="e39-yX-ryO" kind="relationship" relationship="viewControllers" id="c8T-gt-puo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALQ-ua-b0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -174,21 +224,21 @@
             <point key="canvasLocation" x="-2184" y="-205"/>
         </scene>
         <!--로그인-->
-        <scene sceneID="Hl6-9l-aMG">
+        <scene sceneID="Eqh-Bc-Kuf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SKP-vr-7Kt" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e39-yX-ryO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="로그인" image="l.square.fill" catalog="system" id="wOC-e3-D2h"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0U1-EE-kIc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kYO-yL-Wor">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="F1q-nD-Ni7" kind="relationship" relationship="rootViewController" id="Z2c-hR-zc8"/>
+                        <segue destination="F1q-nD-Ni7" kind="relationship" relationship="rootViewController" id="AnE-23-VdK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DBD-KM-pc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mCN-FF-nLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1096.9230769230769" y="153.55450236966823"/>
         </scene>

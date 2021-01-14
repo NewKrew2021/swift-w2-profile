@@ -8,22 +8,22 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet weak var loginId: UITextField!
+    @IBOutlet weak var loginPassword: UITextField!
+    let dummyId = "test"
+    let dummyPassword = "1234"
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.isHidden = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func checkLogin(_ sender: Any) {
+        if !isLoginValidate(){ return }
+        self.navigationController?.pushViewController(MainViewController(), animated: true)
     }
-    */
-
+    
+    func isLoginValidate() -> Bool {
+        return (dummyId, dummyPassword) == (loginId.text, loginPassword.text) ? true : false
+    }
 }

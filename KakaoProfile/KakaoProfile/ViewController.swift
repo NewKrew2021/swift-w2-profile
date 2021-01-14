@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     
+    let url = URL(string: "https://m.daum.net")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nameLabel.text = "Eden"
