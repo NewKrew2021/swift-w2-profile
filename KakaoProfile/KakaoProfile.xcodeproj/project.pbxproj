@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D20D68CD25AD648600A3263E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D68CC25AD648600A3263E /* EditViewController.swift */; };
+		D211DF4225AFE644006C4BE9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D211DF4125AFE644006C4BE9 /* LoginViewController.swift */; };
 		D2B4E38425AC378900A7F010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B4E38325AC378900A7F010 /* AppDelegate.swift */; };
 		D2B4E38625AC378900A7F010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B4E38525AC378900A7F010 /* SceneDelegate.swift */; };
 		D2B4E38825AC378900A7F010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B4E38725AC378900A7F010 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		D20D68CC25AD648600A3263E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		D211DF4125AFE644006C4BE9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D2B4E38025AC378900A7F010 /* KakaoProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B4E38325AC378900A7F010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B4E38525AC378900A7F010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				D2B4E38725AC378900A7F010 /* ViewController.swift */,
 				D2B4E3B625AC396500A7F010 /* TabBarController.swift */,
 				D2B4E38925AC378900A7F010 /* Main.storyboard */,
+				D211DF4125AFE644006C4BE9 /* LoginViewController.swift */,
 				D20D68CC25AD648600A3263E /* EditViewController.swift */,
 				D2B4E38C25AC378900A7F010 /* Assets.xcassets */,
 				D2B4E38E25AC378900A7F010 /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D211DF4225AFE644006C4BE9 /* LoginViewController.swift in Sources */,
 				D2B4E38825AC378900A7F010 /* ViewController.swift in Sources */,
 				D2B4E3B725AC396500A7F010 /* TabBarController.swift in Sources */,
 				D2B4E38425AC378900A7F010 /* AppDelegate.swift in Sources */,

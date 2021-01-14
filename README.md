@@ -79,4 +79,11 @@ david의 README
 
   ![image-20210114113241480](README.assets/image-20210114113241480.png)
 
+  ### commit : make LoginViewController
+  
+  - make LoginViewController.swift
+  - set the controller as the Cunstom class of Navigation Controller
+  
+  ![image-20210114114209776](README.assets/image-20210114114209776.png)
+  
   
