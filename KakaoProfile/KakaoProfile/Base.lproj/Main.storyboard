@@ -102,8 +102,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q6w-Mx-LAl">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1r-wK-8Kn">
+                                <rect key="frame" x="0.0" y="78" width="375" height="700"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -111,18 +111,30 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5S-QC-TTd">
-                                <rect key="frame" x="13" y="693" width="52" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgi-Sr-NJF">
+                                <rect key="frame" x="0.0" y="14" width="75" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="뒤로가기"/>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZK-iI-j3z">
+                                        <rect key="frame" x="8" y="1" width="52" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="뒤로가기"/>
+                                        <connections>
+                                            <action selector="myButtonTouched:" destination="iYb-e4-EGg" eventType="touchUpInside" id="mDd-JO-yuO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nV7-lp-BC3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="뉴스" id="Ojr-Sl-XND"/>
                     <connections>
-                        <outlet property="backButton" destination="U5S-QC-TTd" id="2YP-Ux-pJ2"/>
+                        <outlet property="myButton" destination="YZK-iI-j3z" id="BbL-8q-RU2"/>
+                        <outlet property="webSubView" destination="Fgi-Sr-NJF" id="XtX-4T-TrV"/>
+                        <outlet property="webView" destination="s1r-wK-8Kn" id="5AN-6A-IRX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olV-3e-8Nb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
