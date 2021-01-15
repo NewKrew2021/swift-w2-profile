@@ -169,3 +169,11 @@ david의 README
 - remake useless hard codes
 - call method of super class when overriding
 
+### commit : Some Change
+
+- make WEWebView
+- connect the view using IBOutlet
+- add back button in that WEWebView
+
+![image-20210115201354912](README.assets/image-20210115201354912.png)
+
