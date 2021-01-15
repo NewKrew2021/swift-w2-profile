@@ -8,13 +8,16 @@
 import UIKit
 import WebKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
-    var webView: WKWebView!
+    @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var webSubView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = false
+        myButton.layer.zPosition = 1
     }
     
     override func viewDidLoad() {
@@ -23,19 +26,22 @@ class MainViewController: UIViewController {
             let myRequest = URLRequest(url: url)
             webView.load(myRequest)
         }
+        myLoadView()
 
     }
-
-}
-
-extension MainViewController: WKUIDelegate {
+    @IBAction func myButtonTouched(_ sender: Any) {
+        webView.goBack()
+    }
     
-
-    override func loadView() {
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+    func myLoadView() {
         webView.uiDelegate = self
-        view = webView
+        view.addSubview(webView)
+        webView.addSubview(webSubView)
+        webSubView.addSubview(myButton)
     }
     
+    
 }
+
+//extension MainViewController: {
+//}
