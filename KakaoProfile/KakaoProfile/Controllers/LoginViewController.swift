@@ -11,9 +11,13 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var userId: UITextField!
     @IBOutlet weak var password: UITextField!
+    let alert = UIAlertController(title: "로그인", message: "실패", preferredStyle: .alert)
 
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor(rgb: 0xFFE812)
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(named: "KakaoColor")
+        self.navigationController?.navigationBar.isHidden = true
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
     }
 
     @IBAction func onPressLogin(_ sender: Any) {
@@ -25,16 +29,24 @@ class LoginViewController: UIViewController {
             UserAPI.delegate = self
             try UserAPI.login(self, userId: userId?.text ?? "", password: password?.text ?? "")
         } catch {
-            return
+            alertMessage()
         }
+    }
+    
+    private func alertMessage() {
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
 extension LoginViewController: UserAPIDelegate {
-    func didVerification(isVerified: Bool) {
+    func didVerify(isVerified: Bool) {
         if isVerified {
-            // to-do go to the webView of daum main home
-            print("isVerified", isVerified)
+            // to-do: go to the webView of daum main home
+            if let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") {
+                self.navigationController?.pushViewController(mainViewController, animated: true)
+            }
+        } else {
+            alertMessage()
         }
     }
 

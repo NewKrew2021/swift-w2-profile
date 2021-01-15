@@ -6,5 +6,6 @@
 //
 
 struct Config {
-    static let baseURL = "https://witty-swan-67.loca.lt"
+    static let baseURL = "https://old-impala-4.loca.lt"
+    static let daumURL = "https://m.daum.net"
 }
